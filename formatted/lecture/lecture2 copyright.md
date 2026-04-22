@@ -34,8 +34,8 @@ Department of Computer Science
 - steps for the solution of a specific problem independent of the code in which such steps will be expressed
 
 - **Algorithm vs program:**  
-  – an algorithm is expressed in natural language and denotes the steps for solving a problem whereas a program is an implementation of such steps using a specific programming language  
-  – related to idea/expression dichotomy – is algorithm idea? Or expression?
+  - an algorithm is expressed in natural language and denotes the steps for solving a problem whereas a program is an implementation of such steps using a specific programming language  
+  - related to idea/expression dichotomy - is algorithm idea? Or expression?
 
 - *Ibcos Computers v Barclays Mercantile* [1994] FSR 275: crucial question is whether the idea is a general idea or a detailed idea — the former is not protected but the latter is
 
@@ -70,10 +70,10 @@ As a literary work, a program must be:
 - **Collaborative works — two cases:**
 
   1. **Distinct authors**  
-     – contribution of each separable from that of others (e.g. each writes one module of a program) — each is the author of his own part
+     - contribution of each separable from that of others (e.g. each writes one module of a program) — each is the author of his own part
 
   2. **Joint authors**  
-     – contribution of each not separable from that of the others — all are "joint authors" of the entire work: s.12(1)
+     - contribution of each not separable from that of the others — all are "joint authors" of the entire work: s.12(1)
 
 > **NB.** Contributions of an author must not be trivial and must go to the expression of the work.  
 > **NB.** Skill and labour in testing a program not sufficient for authorship: *Fylde Microsystems v Key Radio Systems* [1998] FSR 449.
@@ -101,11 +101,11 @@ As a literary work, a program must be:
 
 - **Collaborative works — two cases:**
 
-  1. **Distinct authors** – each owns the copyright in his own part
+  1. **Distinct authors** - each owns the copyright in his own part
 
   2. **Joint authors**  
-     – all authors own the copyright in the whole work jointly in equal shares as "tenants in common": *Lauri v Renad* [1892] 3 Ch 402; *Stuart v Barrett* [1994] EMLR 448  
-     – but any act requiring licence requires the licence of all: s.194(2)
+     - all authors own the copyright in the whole work jointly in equal shares as "tenants in common": *Lauri v Renad* [1892] 3 Ch 402; *Stuart v Barrett* [1994] EMLR 448  
+     - but any act requiring licence requires the licence of all: s.194(2)
 
 - owner of computer-generated literary, dramatic, musical or artistic work also governed by s.13
 
@@ -125,11 +125,11 @@ As a literary work, a program must be:
 - work made in the course of the author’s employment — copyright belongs to the author’s employer subject to any contract to the contrary: CO, s.14(1)
 
 - **1st question:** "employee" or "independent contractor" (i.e. free-lance)?  
-  – not difficult to answer in computing field
+  - not difficult to answer in computing field
 
 - **2nd question:** "in the course of employment" is a question of fact  
-  – translation by a journalist done in his own time and employer had paid him a separate fee: *Byrne v Statist* [1914] 1 KB 622  
-  – lectures given by an accountant for which employer had provided secretarial help and paid expenses in relation to the lectures: *Stephenson Jordan v MacDonald* (1952) 69 RPC 10
+  - translation by a journalist done in his own time and employer had paid him a separate fee: *Byrne v Statist* [1914] 1 KB 622  
+  - lectures given by an accountant for which employer had provided secretarial help and paid expenses in relation to the lectures: *Stephenson Jordan v MacDonald* (1952) 69 RPC 10
 
 ---
 
@@ -140,8 +140,8 @@ As a literary work, a program must be:
 - court may infer an implied agreement on ownership in circumstances supported by clear evidence: *John Richardson Computers v Flanders* [1993] FSR 497
 
 - **Even if no agreement (express or implied) on ownership,** commissioner has 2 statutory rights:  
-  – an exclusive licence to exploit the commissioned work for all purposes that could reasonably have been contemplated by him and the author at time of contract; **and**  
-  – power to restrain any exploitation of the work for any purpose which he could reasonably object: CO, s.15(2)
+  - an exclusive licence to exploit the commissioned work for all purposes that could reasonably have been contemplated by him and the author at time of contract; **and**  
+  - power to restrain any exploitation of the work for any purpose which he could reasonably object: CO, s.15(2)
 
 ### Examples
 

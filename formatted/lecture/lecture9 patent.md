@@ -15,8 +15,8 @@ Department of Computer Science
 - if ≥ 2 inventors, then collectively own the patent and each is entitled to an equal share as **"tenants in common"** in the patent: s.54(1)
 
 - **Each co-owner may**  
-  – license, assign or mortgage his share only with the consent of all others: s.54(3)  
-  – otherwise exploit the patent for his own benefit without the consent of others: s.54(2)
+  - license, assign or mortgage his share only with the consent of all others: s.54(3)  
+  - otherwise exploit the patent for his own benefit without the consent of others: s.54(2)
 
 > **NB.** Co-owners' rights can be varied by contract between themselves.
 
@@ -25,8 +25,8 @@ Department of Computer Science
 ## Employee Invention: s.57
 
 - employee invention belongs to the **employer** in any of the following situations:  
-  – within the employee’s normal or specifically assigned duties **AND** an invention might reasonably be expected from carrying out the duties  
-  – within the employee’s duties and the employee has a special obligation to further the interests of the employer’s undertaking because of the nature of his duties and his particular responsibilities
+  - within the employee’s normal or specifically assigned duties **AND** an invention might reasonably be expected from carrying out the duties  
+  - within the employee’s duties and the employee has a special obligation to further the interests of the employer’s undertaking because of the nature of his duties and his particular responsibilities
 
 > **NB.** Slightly different from the position under copyright law.
 
@@ -62,7 +62,7 @@ Department of Computer Science
 
 - **"new"** if the invention does not form part of the **"state of the art"**
 
-- **"state of the art"** comprises – everything made available to the public (in HK or elsewhere) whether by means of a written or oral description, by use or any other way before the **"material date"** of the patent application
+- **"state of the art"** comprises - everything made available to the public (in HK or elsewhere) whether by means of a written or oral description, by use or any other way before the **"material date"** of the patent application
 
 > **NB.** **"Material date"** = filing date of the patent application or, if priority is claimed, the priority date: PO, s.2(1).  
 > **NB.** Must ensure that any disclosure of invention before applying for patent does not enable a skilled person in the field to make the invention.  
@@ -77,9 +77,9 @@ Department of Computer Science
 > **NB.** Assessment of novelty and inventiveness requires expert evidence.
 
 - **Obvious inventions in the past**  
-  – mere collocation of known devices: *Williams v Nye* (1890) 7 RPC 62  
-  – analogous use: *Thermos v Isola* (1910) 27 RPC 388  
-  – mere verification of previous predictions: *Genentech v Wellcome Foundation* [1989] RPC 147
+  - mere collocation of known devices: *Williams v Nye* (1890) 7 RPC 62  
+  - analogous use: *Thermos v Isola* (1910) 27 RPC 388  
+  - mere verification of previous predictions: *Genentech v Wellcome Foundation* [1989] RPC 147
 
 > **NB.** If an invention is known in the state of the art, a slightly different invention may be novel, but may fail for being obvious (i.e. not inventive).
 
@@ -88,10 +88,10 @@ Department of Computer Science
 ## Excluded Subject-Matter
 
 - **s.9A(2):** not regarded as "inventions":  
-  – discovery, scientific theory or mathematical method  
-  – aesthetic creation  
-  – scheme, rule or method for performing a mental act, playing a game or doing business, or a computer program  
-  – presentation of information
+  - discovery, scientific theory or mathematical method  
+  - aesthetic creation  
+  - scheme, rule or method for performing a mental act, playing a game or doing business, or a computer program  
+  - presentation of information
 
 - **BUT** exclusion applies **"only to the extent to which a patent or patent application relates to such subject-matter or activities as such"**
 
@@ -111,16 +111,16 @@ Department of Computer Science
 > **Q:** What about a program loaded into a known computer, i.e. known computer + new program?
 
 > **NB.** UK's early position on software patent was very different from the US. US Patents Act does not exclude computer programs from patentability:  
-> – US Patents Act, s.101: *"Whosoever invents or discovers any new and useful process, machine, manufacture, or composition of matter, or any new and useful improvement thereof, may obtain a patent therefor, …"*
+> - US Patents Act, s.101: *"Whosoever invents or discovers any new and useful process, machine, manufacture, or composition of matter, or any new and useful improvement thereof, may obtain a patent therefor, …"*
 
 ---
 
 ## Subsequent Development in UK (influenced by EPO)
 
 - computer program can be patented if the program makes a **"technical contribution"** to the state of the art, i.e.:  
-  – solves a technical problem  
-  – uses technical means **AND**  
-  – produces technical effect which is observable/measurable, e.g. reduced energy consumption, improved product quality  
+  - solves a technical problem  
+  - uses technical means **AND**  
+  - produces technical effect which is observable/measurable, e.g. reduced energy consumption, improved product quality  
   Cf. *Merrill Lynch* [1989] RPC 561 (CA)
 
 ---
@@ -134,14 +134,14 @@ Department of Computer Science
 - Cf. *IBM’s Application* [1999] RPC 861 (EPO TBA) (*RR)
 
 - **Effect of a program can be**  
-  – **external**, e.g. program-controlled manufacturing process, **OR**  
-  – **internal**, e.g. program-controlled memory management thereby improving the performance of the computer
+  - **external**, e.g. program-controlled manufacturing process, **OR**  
+  - **internal**, e.g. program-controlled memory management thereby improving the performance of the computer
 
 > **NB.** Computer program can be claimed on its own! Opened the door for patenting software despite the exclusion.
 
 - **BUT** the net effect of the invention must not itself be excluded by the law, e.g.:  
-  – if net effect is business method, excluded: *Merrill Lynch* [1989] RPC 561 (CA) (a computerised trading system in stocks)  
-  – if net effect is performing mental act, excluded: *Wang's Application* [1991] RPC 463 (a system enabling an expert to store his knowledge in a hierarchical form so that expert advice could be offered)
+  - if net effect is business method, excluded: *Merrill Lynch* [1989] RPC 561 (CA) (a computerised trading system in stocks)  
+  - if net effect is performing mental act, excluded: *Wang's Application* [1991] RPC 463 (a system enabling an expert to store his knowledge in a hierarchical form so that expert advice could be offered)
 
 ### Examples
 
