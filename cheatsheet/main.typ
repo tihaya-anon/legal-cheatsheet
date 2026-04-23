@@ -11,7 +11,6 @@
     "DejaVu Serif",
   ),
 )
-#set par(justify: true, leading: 0.68em, spacing: 0em)
 #set heading(numbering: none)
 #set list(tight: true, spacing: 0em)
 #set block(spacing: 0em)
@@ -42,6 +41,7 @@
 
 #text(size: 5.4pt)[
   #columns(3, gutter: 4pt)[
+    #set par(justify: true, leading: 0.88em, spacing: 0em)
     #outline(title: [目录 TOC], depth: 2)
   ]
 ]
