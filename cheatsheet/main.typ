@@ -1,9 +1,9 @@
 #set page(
-  paper: "a4",
-  margin: (x: 6.5mm, y: 6mm),
+  paper: "a5",
+  margin: (x: 6mm, y: 5mm),
 )
 #set text(
-  size: 7pt,
+  size: 5pt,
   font: (
     "Tinos",
     "Noto Serif CJK SC",
@@ -29,12 +29,8 @@
 #let law(x) = [#text(weight: "bold", x)]
 #let k(x) = [#text(style: "italic", x)]
 
-#align(center)[
-  #text(size: 10pt, weight: "bold", [COMP7901 Cheatsheet (HK IP + Privacy)])
-]
-
 #text(size: 5.4pt)[
-  #columns(3, gutter: 4pt)[
+  #columns(2, gutter: 4pt)[
     #set par(justify: true, leading: 0.88em, spacing: 0em)
     #outline(title: [目录 TOC], depth: 2)
   ]
