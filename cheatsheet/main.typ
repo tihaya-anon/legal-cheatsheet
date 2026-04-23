@@ -28,6 +28,16 @@
 #let sec(s) = [#text(weight: "bold", [s.#s])]
 #let law(x) = [#text(weight: "bold", x)]
 #let k(x) = [#text(style: "italic", x)]
+#let body-footer = context {
+  let n = counter(page).get().first()
+  let num = text(size: 4.5pt, counter(page).display("1"))
+
+  if calc.even(n) {
+    align(left)[#num]
+  } else {
+    align(right)[#num]
+  }
+}
 
 #text(size: 5.4pt)[
   #columns(2, gutter: 4pt)[
@@ -35,10 +45,11 @@
     #outline(title: [目录 TOC], depth: 2)
   ]
 ]
-#set page(columns: 2)
+#set page(columns: 2, footer: body-footer)
 #set columns(gutter: 4pt)
 #set par(leading: 0.88em, spacing: 0em)
 #set list(spacing: auto)
+#counter(page).update(1)
 
 #h2([关键词 Index])
 - CO: s.22/23/28A/29/31/35A/39A/41A/65/107/118; PDPO: DPP1/3/4/6, s.20/26/35C/E/J/K/L, s.64, s.66; PO: s.9A/9B/9C/9D, s.57, s.73, s.75, s.91; tests: Moorhouse, Actavis 3Q, substantial part, novelty
@@ -228,7 +239,7 @@
   1. 变体虽不落入字面，是否以基本相同方式实现基本相同结果？
   2. 对 skilled person 而言，这点在优先权日是否显而易见？
   3. skilled person 是否会认为专利人仍坚持严格字面含义为必要要求？
-  - 常见结论：Q1/Q2 = Yes 且 Q3 = No -> 更可能构成 equivalence infringement。
+  4. 常见结论：Q1/Q2 = Yes 且 Q3 = No -> 更可能构成 equivalence infringement。
 
   #h2([D. Exceptions (s.75)])
   - 私人且非商业使用。
@@ -300,8 +311,6 @@
   - Copyright："X likely infringed by copying/communication; fair dealing unlikely; civil remedies available and criminal risk arguable on commercial facts."
   - Privacy："Use/disclosure appears a new purpose without prescribed consent, breaching DPP3; Part 6A / doxxing offences may also arise."
   - Patent："Liability depends on claim construction; literal infringement is arguable, and Actavis equivalence strengthens claimant’s case unless strict compliance was intended."
-
-  #align(center)[#text(size: 7pt, [End of cheatsheet - keep updating with your own lecturer emphasis before exam.])]
 
 
   #h1([10. Copyright Deep Dive - Section-by-Section])
