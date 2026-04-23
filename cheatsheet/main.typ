@@ -16,18 +16,12 @@
 #set block(spacing: 0em)
 
 #show heading.where(level: 1): it => block(
-  above: 0em,
-  below: 0em,
-  inset: 1.1pt,
   fill: luma(240),
   stroke: 0.3pt + luma(180),
   radius: 1.2pt,
 )[*#it.body*]
 
-#show heading.where(level: 2): it => block(
-  above: 0em,
-  below: 0em,
-)[#text(weight: "bold", it.body)]
+#show heading.where(level: 2): it => block()[#text(weight: "bold", it.body)]
 
 #let h1(t) = [#heading(level: 1)[#t]]
 #let h2(t) = [#heading(level: 2)[#t]]
@@ -47,6 +41,9 @@
 ]
 #h2([关键词 Index])
 - CO: s.22/23/28A/29/31/35A/39A/41A/65/107/118; PDPO: DPP1/3/4/6, s.20/26/35C/E/J/K/L, s.64, s.66; PO: s.9A/9B/9C/9D, s.57, s.73, s.75, s.91; tests: Moorhouse, Actavis 3Q, substantial part, novelty
+
+#set par(leading: 0.88em, spacing: 0em)
+#set list(spacing: auto)
 
 #grid(
   columns: (1fr, 1fr),
@@ -199,7 +196,7 @@
     - 问题导向：贡献点在“业务/内容逻辑”还是“技术实现改进”？
     - 若仅是生成诗词/商业规则自动化，易被排除。
     - 若改进计算机运行（速度、能耗、硬件控制、可靠性），较可能可专利。
-  ]
+  ],
 )
 
 
@@ -321,7 +318,7 @@
     - Patent："Liability depends on claim construction; literal infringement is arguable, and Actavis equivalence strengthens claimant’s case unless strict compliance was intended."
 
     #align(center)[#text(size: 7pt, [End of cheatsheet - keep updating with your own lecturer emphasis before exam.])]
-  ]
+  ],
 )
 
 
@@ -439,7 +436,7 @@
 
     #h2([J. 结论句压缩版])
     - "On these facts, X is likely liable for primary infringement, with potential secondary/criminal liability depending on commercial dealing and knowledge."
-  ]
+  ],
 )
 
 
@@ -553,7 +550,7 @@
     - "The data user should provide partial access by redacting third-party identifiers."
     - "Selling customer data for gain creates heightened criminal exposure under Part 6A."
     - "The doxxing provisions may apply where disclosure causes specified harm."
-  ]
+  ],
 )
 
 
@@ -668,7 +665,7 @@
     - "DreamY omits one essential integer, so literal infringement is contested."
     - "Nevertheless, equivalence remains arguable under Actavis."
     - "The defendant should counterclaim revocation based on novelty/inventive-step attacks."
-  ]
+  ],
 )
 
 
@@ -786,8 +783,11 @@
     - 法条与事实一一对应。
     - 不写绝对句，不跳步骤。
 
-    #align(center)[#text(size: 7pt, [Long Version End. If still under page limit, enlarge line spacing or add your own case notes.])]
-  ]
+    #align(center)[#text(
+      size: 7pt,
+      [Long Version End. If still under page limit, enlarge line spacing or add your own case notes.],
+    )]
+  ],
 )
 
 
@@ -960,7 +960,7 @@
     - 只背概念，不写具体法条号。
     - 不区分 civil liability 与 criminal liability。
     - 忘记对每个主体分别分析。
-  ]
+  ],
 )
 
 
@@ -1081,7 +1081,7 @@
     - 来不及时优先写“主体分开 + section numbers + likely conclusion”。
 
     #align(center)[#text(size: 7pt, [Extended Version End.])]
-  ]
+  ],
 )
 
 
@@ -1248,9 +1248,7 @@
     #h2([E. Final Reminder])
     - 你的答案不是写“知识点”，而是写“要件如何被事实满足/不满足”。
     - 评分重点是结构化法律推理，不是措辞花哨。
-
-    #align(center)[#text(size: 7pt, [Practice this sheet by answering one past paper with only this PDF.])]
-  ]
+  ],
 )
 
 
@@ -1346,15 +1344,7 @@
     - Privacy：DPP1/3/4 + Part6A + s.20 DAR + s.64 doxxing + s.66。
     - Patent：s.9A/9B/9C/9D + s.57 + s.73 + Actavis + s.91。
     - 万能句："On balance, liability is likely/arguable, subject to statutory exceptions and evidential proof."
-
-    #h2([35. Personal Final Notes])
-    - Lecturer重点：[      ][      ][      ][...]
-    - 我最弱模块：[      ][      ][      ][...]
-    - 必背法条：[      ][      ][      ][...]
-    - 最常错句型：[      ][      ][      ][...]
-    - 考前 30 分钟复习顺序：[      ][      ]
-
-  ]
+  ],
 )
 
 #grid(
@@ -1430,5 +1420,5 @@
     - privacy 题：先 DPP，再 offences；不要倒过来。
     - 不确定时写条件式结论：\"If the court accepts ..., X is likely ...; otherwise ...\"。
     - 每段尽量以 section number 起手，考官最容易给分。
-  ]
+  ],
 )
