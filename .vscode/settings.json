@@ -1,0 +1,11 @@
+{
+  "tinymist.fontPaths": [
+    "${workspaceFolder}/cheatsheet/fonts",
+    "${env:HOME}/.local/share/fonts"
+  ],
+  "tinymist.systemFonts": true,
+  "tinymist.typstExtraArgs.fontPaths": [
+    "${workspaceFolder}/cheatsheet/fonts",
+    "${env:HOME}/.local/share/fonts"
+  ]
+}
