@@ -7,29 +7,6 @@ mkdir -p "${FONT_DIR}"
 
 echo "Downloading fonts into: ${FONT_DIR}"
 
-download_if_missing() {
-  local out="$1"
-  local url="$2"
-  if [[ -f "${out}" ]]; then
-    echo "Skip (exists): ${out}"
-    return 0
-  fi
-  echo "Download: ${out}"
-  curl -fL -o "${out}" "${url}"
-}
-
-download_if_missing \
-  "${FONT_DIR}/Tinos-Regular.ttf" \
-  "https://github.com/google/fonts/raw/main/ofl/tinos/Tinos-Regular.ttf"
-
-download_if_missing \
-  "${FONT_DIR}/NotoSerifCJKsc-Regular.otf" \
-  "https://github.com/notofonts/noto-cjk/raw/main/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Regular.otf"
-
-download_if_missing \
-  "${FONT_DIR}/NotoSansCJKsc-Regular.otf" \
-  "https://github.com/notofonts/noto-cjk/raw/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf"
-
 if [[ -f "${FONT_DIR}/DejaVuSerif.ttf" ]]; then
   echo "Skip (exists): ${FONT_DIR}/DejaVuSerif.ttf"
 else

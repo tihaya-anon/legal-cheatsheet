@@ -1,0 +1,38 @@
+#let h1(t) = heading(level: 1)[#t]
+#let h2(t) = heading(level: 2)[#t]
+#let cell(x) = [#x]
+
+#h1([中英术语表])
+#table(
+  columns: (2.2fr, 3fr, 4.8fr),
+  inset: 4pt,
+  stroke: .4pt,
+  align: left + top,
+  [*中文*], [*English*], [*Exam-use Note*],
+  [受限制行为], [restricted acts], [版权侵权总入口；通常配 s.22。],
+  [实质部分], [substantial part], [质而非量；核心表达被取用即可。],
+  [向公众传播], [communication to the public], [网络上传、串流、on-demand 提供都要优先审此项。],
+  [改编], [adaptation], [含软件翻译、改写、结构性转换。],
+  [次级侵权], [secondary infringement], [处理侵权复制品的商业链条责任。],
+  [侵权复制品], [infringing copy], [常与 s.35 假设测试联动。],
+  [公平处理], [fair dealing], [多因素衡量，非绝对豁免。],
+  [排他许可], [exclusive licence], [可产生独立或并列诉权。],
+  [资料当事人], [data subject], [PDPO 权利主体。],
+  [资料使用者], [data user], [决定用途与处理方式者；核心义务主体。],
+  [资料处理者], [data processor], [替他人处理数据者，责任结构不同。],
+  [订明同意], [prescribed consent], [DPP3/Part 6A 高频术语。],
+  [直接促销], [direct marketing], [先通知、后同意、可退出。],
+  [查阅资料要求], [data access request (DAR)], [ss.18-21 程序题必备。],
+  [更正资料要求], [data correction request (DCR)], [ss.22-25 程序题必备。],
+  [停止披露通知], [cessation notice], [s.66K 起，违规可独立成罪。],
+  [起底], [doxxing], [对应 s.64 系列罪名。],
+  [重要日期], [material date], [专利新颖性与创造性的时间锚点。],
+  [可专利客体], [patentable subject matter], [先过 s.9A，再审 9B/9C/9D。],
+  [新颖性], [novelty], [看是否被现有技术完整公开。],
+  [创造性], [inventive step], [对本领域技术人员是否显而易见。],
+  [工业实用性], [industrial applicability], [可产业实施并产生技术效果。],
+  [先申请制], [first-to-file], [竞合申请按先提交优先。],
+  [撤销], [revocation], [被告反击专利有效性的关键程序。],
+  [权利要求解释], [claim construction], [侵权比对前必须先做。],
+  [必要技术特征], [essential integers], [专利侵权逐项比对的颗粒度。],
+)
