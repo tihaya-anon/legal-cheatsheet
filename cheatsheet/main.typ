@@ -230,9 +230,9 @@
   [Cap.514], [s.88(3)], [专利权人/被告], [限定授权后追溯救济的范围与前提，防止把临时保护无限扩张。], [权利人需证明被告行为与最终授权权利要求实质对应。],
 )
 
-#h1([Exam Answer Playbook（按卷面题型可直接落笔）])
+#h1([Exam Answer Playbook])
 
-#h2([A. Patent Questions（Q1 高频）])
+#h2([A. Patent Questions])
 #table(
   columns: (1.5fr, 2.4fr, 3.6fr, 3.5fr),
   inset: 4pt,
@@ -249,7 +249,7 @@
   [Pre-grant protection], [s.88(1), s.88(3)], [公开后到授权前是否可追溯；需证明后续授权权利覆盖相关行为。], [“If grant is eventually obtained, s.88 may allow limited retrospective relief for acts done after publication, subject to statutory conditions.”],
 )
 
-#h2([B. Copyright Questions（Q2/Q3 高频）])
+#h2([B. Copyright Questions])
 #table(
   columns: (1.5fr, 2.4fr, 3.6fr, 3.5fr),
   inset: 4pt,
@@ -267,7 +267,7 @@
   [Internet/transmission], [s.28A, s.65], [串流、缓存、可下载性、向公众开放程度；浏览豁免边界。], [“Uploading/streaming to subscribers is communication to the public under s.28A; s.65 does not excuse this commercial dissemination.”],
 )
 
-#h2([C. PDPO Questions（Q2/Q3 高频）])
+#h2([C. PDPO Questions])
 #table(
   columns: (1.5fr, 2.4fr, 3.6fr, 3.5fr),
   inset: 4pt,
@@ -285,7 +285,7 @@
   [Compensation claim], [s.66, s.66(2), s.65], [资料当事人损失（含情感损害）；雇主替代责任与免责。], [“Betty may seek compensation under s.66, including injury to feelings, and employer liability may arise via s.65 where applicable.”],
 )
 
-#h1([答卷句型（可直接抄）])
+#h1([答卷句型])
 #table(
   columns: (1.8fr, 5.2fr, 3fr),
   inset: 4pt,
@@ -299,7 +299,7 @@
   [民刑分流], [同一事实可同时触发民事与刑事路径：civilly under s.[...], criminally under s.[...], with different thresholds.], [版权/私隐常见],
 )
 
-#h1([中英术语表（考试高频）])
+#h1([中英术语表])
 #table(
   columns: (2.2fr, 3fr, 4.8fr),
   inset: 4pt,

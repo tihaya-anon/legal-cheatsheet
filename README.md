@@ -2,6 +2,7 @@
 ```
 .
 ├── README.md       # project overview / documentation
+├── scripts         # utility scripts
 ├── enriched        # adds answers to questions from exams and lectures
 │   ├── exam
 │   └── lecture
@@ -13,4 +14,27 @@
 │   └── lecture
 └── translated      # Chinese (Simplified) version
     └── lecture
+```
+
+## Cheatsheet fonts (Typst)
+
+`cheatsheet/main.typ` uses these four fonts:
+
+- `Tinos`
+- `Noto Serif CJK SC`
+- `Noto Sans CJK SC`
+- `DejaVu Serif`
+
+Download all four fonts into `cheatsheet/fonts`:
+
+```bash
+bash scripts/download-cheatsheet-fonts.sh
+```
+
+The script is idempotent: if a font file already exists, it will be skipped.
+
+Then compile with Typst and explicitly include the local font directory:
+
+```bash
+typst compile --font-path cheatsheet/fonts cheatsheet/main.typ cheatsheet/main.pdf
 ```
