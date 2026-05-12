@@ -4,21 +4,7 @@
 
 #h1([High-Frequency Tests])
 
-#h2([A. Patent Tests])
-#table(
-  columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
-  inset: 4pt,
-  stroke: .4pt,
-  align: left + top,
-  [*Test / Doctrine*], [*Authority*], [*Checklist (Exam Steps)*], [*Output Line*],
-  [Actavis 3-question equivalence test], [*Actavis UK v Eli Lilly* [2017] UKSC 48; Cap.514 s.73], [1) 变体是否以基本相同方式实现基本相同结果；2) 在优先权日假设知识下，该等同方式对本领域技术人员是否显而易见；3) 技术人员会否认为专利权人仍坚持字面严格遵守为必要要求。], [“Applying *Actavis*, Q1/Q2 are yes and Q3 is no, so the variant is likely within claim scope by equivalence.”],
-  [Claim construction first], [Cap.514 s.73; lecture method], [先解释权利要求文字与必要技术特征，再做逐项比对；不要跳过 claim construction 直接谈侵权。], [“The infringement analysis starts with claim construction; only then can the alleged product/process be mapped to each essential integer.”],
-  [Aerotel 4-step excluded subject matter test], [*Aerotel v Telco* [2006] EWCA Civ 1371; Cap.514 s.9A(2)], [1) properly construe claim；2) identify actual contribution；3) 看是否仅落入排除客体；4) 检查贡献是否具技术性质。], [“On *Aerotel* step 3/4, the contribution is [pure business rule / technical], so s.9A exclusion [does / does not] apply.”],
-  [Novelty full anticipation check], [Cap.514 s.9B + s.2(1)], [锁定 material date；找单一最接近文献/公开使用；逐项核对必要特征是否全部已公开（enabling disclosure）。], [“Because one prior disclosure contains all claim integers before the material date, novelty under s.9B is destroyed.”],
-  [Inventive step obviousness check], [Cap.514 s.9C], [识别区别特征；以本领域技术人员视角判断是否显而易见；避免 hindsight reasoning。], [“The only difference is [...], which would be obvious to the skilled person; s.9C is therefore not satisfied.”],
-)
-
-#h2([B. Copyright Tests])
+#h2([A. Copyright Tests])
 #table(
   columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
   inset: 4pt,
@@ -32,7 +18,7 @@
   [Fair dealing 4-factor test], [Cap.528 s.38(3), s.39(4), s.39A(2), s.41A(2), s.37(3)], [四因素：用途性质、原作品性质、取用比例与实质性、对市场替代影响；并总览全部情境与正常利用冲突。], [“On the four factors, the dealing substitutes the original market and is unlikely to be fair.”],
 )
 
-#h2([C. PDPO Tests])
+#h2([B. PDPO Tests])
 #table(
   columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
   inset: 4pt,
@@ -46,3 +32,16 @@
   [Doxxing elements test], [Cap.486 s.64(1), (3)/(3A)/(3B)/(3C)/(3D)], [未经相关同意披露 + 意图或罔顾造成指明伤害 +（加重型）实际伤害/持续扩散；最后单列抗辩。], [“The postings likely satisfy unauthorised disclosure and harm-intent elements, engaging s.64 doxxing liability.”],
 )
 
+#h2([C. Patent Tests])
+#table(
+  columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
+  inset: 4pt,
+  stroke: .4pt,
+  align: left + top,
+  [*Test / Doctrine*], [*Authority*], [*Checklist (Exam Steps)*], [*Output Line*],
+  [Actavis 3-question equivalence test], [*Actavis UK v Eli Lilly* [2017] UKSC 48; Cap.514 s.73], [1) 变体是否以基本相同方式实现基本相同结果；2) 在优先权日假设知识下，该等同方式对本领域技术人员是否显而易见；3) 技术人员会否认为专利权人仍坚持字面严格遵守为必要要求。], [“Applying *Actavis*, Q1/Q2 are yes and Q3 is no, so the variant is likely within claim scope by equivalence.”],
+  [Claim construction first], [Cap.514 s.73; lecture method], [先解释权利要求文字与必要技术特征，再做逐项比对；不要跳过 claim construction 直接谈侵权。], [“The infringement analysis starts with claim construction; only then can the alleged product/process be mapped to each essential integer.”],
+  [Aerotel 4-step excluded subject matter test], [*Aerotel v Telco* [2006] EWCA Civ 1371; Cap.514 s.9A(2)], [1) properly construe claim；2) identify actual contribution；3) 看是否仅落入排除客体；4) 检查贡献是否具技术性质。], [“On *Aerotel* step 3/4, the contribution is [pure business rule / technical], so s.9A exclusion [does / does not] apply.”],
+  [Novelty full anticipation check], [Cap.514 s.9B + s.2(1)], [锁定 material date；找单一最接近文献/公开使用；逐项核对必要特征是否全部已公开（enabling disclosure）。], [“Because one prior disclosure contains all claim integers before the material date, novelty under s.9B is destroyed.”],
+  [Inventive step obviousness check], [Cap.514 s.9C], [识别区别特征；以本领域技术人员视角判断是否显而易见；避免 hindsight reasoning。], [“The only difference is [...], which would be obvious to the skilled person; s.9C is therefore not satisfied.”],
+)
