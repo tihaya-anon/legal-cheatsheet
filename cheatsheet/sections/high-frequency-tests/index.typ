@@ -1,5 +1,5 @@
 #import "../preamble.typ": h1
-#h1([Core Statute Table])
+#h1([High Frequency Tests])
 #include "a-copyright.typ"
 #include "b-pdpo.typ"
 #include "c-patent.typ"
