@@ -1,6 +1,4 @@
-#let h1(t) = heading(level: 1)[#t]
-#let h2(t) = heading(level: 2)[#t]
-#let cell(x) = [#x]
+#import "premable.typ": h1
 
 #h1([中英术语表])
 #table(

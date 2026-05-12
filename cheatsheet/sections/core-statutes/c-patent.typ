@@ -1,4 +1,4 @@
-#import "../premable.typ": cell, h2
+#import "../premable.typ": h2
 
 #h2([C. Patent (Cap.514)])
 #table(

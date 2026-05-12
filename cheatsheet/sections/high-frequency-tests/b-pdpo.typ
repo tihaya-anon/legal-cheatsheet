@@ -1,4 +1,4 @@
-#import "../premable.typ": cell, h2
+#import "../premable.typ": h2
 #h2([B. PDPO Tests])
 #table(
   columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
