@@ -3,5 +3,6 @@
     "${workspaceFolder}/cheatsheet/fonts",
     "${env:HOME}/.local/share/fonts"
   ],
-  "tinymist.systemFonts": true
+  "tinymist.systemFonts": true,
+  "tinymist.formatterIndentSize": 2
 }

@@ -1,6 +1,6 @@
 #set page(paper: "a4", margin: 9mm)
-#set text(size: 8.2pt, font: ("DejaVu Serif"))
-#set par(leading: 1.08em)
+#set text(size: 4.2pt, font: ("Noto Serif CJK SC", "Tinos"))
+#set par(leading: 1em)
 #set heading(numbering: none)
 
 

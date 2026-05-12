@@ -18,14 +18,12 @@
 
 ## Cheatsheet fonts (Typst)
 
-`cheatsheet/main.typ` uses these four fonts:
+`cheatsheet/main.typ` recommends these fonts:
 
-- `Tinos`
-- `Noto Serif CJK SC`
-- `Noto Sans CJK SC`
-- `DejaVu Serif`
+- `Noto Serif CJK SC` (Chinese, Songti style)
+- `Tinos` (free Times New Roman-compatible alternative)
 
-Download all four fonts into `cheatsheet/fonts`:
+Download the required fonts into `cheatsheet/fonts`:
 
 ```bash
 bash scripts/download-cheatsheet-fonts.sh
