@@ -1,4 +1,4 @@
-#import "premable.typ": h1
+#import "preamble.typ": h1
 
 #h1([答卷句型])
 #table(

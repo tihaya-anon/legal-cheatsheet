@@ -1,11 +1,14 @@
-#import "../premable.typ": h2
+#import "../preamble.typ": h2, high-frequency-table
 #h2([C. Patent Tests])
-#table(
+#high-frequency-table(
   columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
   inset: 4pt,
   stroke: .4pt,
   align: left + top,
-  [*Test / Doctrine*], [*Authority*], [*Checklist (Exam Steps)*], [*Output Line*],
+  [*Test / Doctrine*],
+  [*Authority*],
+  [*Checklist (Exam Steps)*],
+  [*Output Line*],
   [Actavis 3-question equivalence test],
   [*Actavis UK v Eli Lilly* [2017] UKSC 48; Cap.514 s.73],
   [1) 变体是否以基本相同方式实现基本相同结果；2) 在优先权日假设知识下，该等同方式对本领域技术人员是否显而易见；3) 技术人员会否认为专利权人仍坚持字面严格遵守为必要要求。],

@@ -1,12 +1,11 @@
-#import "../premable.typ": h2
+#import "../preamble.typ": exam-playbook-table, h2
 
 #h2([B. PDPO Questions])
-#table(
-  columns: (1.5fr, 2.4fr, 3.6fr, 3.5fr),
-  inset: 4pt,
-  stroke: .4pt,
-  align: left + top,
-  [*Issue Type*], [*Statutory Route*], [*What to Prove (Checklist)*], [*Ready-to-Use Answer Skeleton*],
+#exam-playbook-table(
+  [*Issue Type*],
+  [*Statutory Route*],
+  [*What to Prove (Checklist)*],
+  [*Ready-to-Use Answer Skeleton*],
   [Is it personal data?],
   [s.2(1)],
   [是否识别在世个人；数据是否由 data user 控制；是否来自 data processor 场景。],

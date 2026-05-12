@@ -6,9 +6,9 @@
 
 #include "sections/core-statutes/index.typ"
 
-// #include "sections/exam-playbook/index.typ"
+#include "sections/exam-playbook/index.typ"
 
-// #include "sections/high-frequency-tests/index.typ"
+#include "sections/high-frequency-tests/index.typ"
 
 #include "sections/answer-phrases.typ"
 

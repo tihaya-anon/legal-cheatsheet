@@ -1,11 +1,14 @@
-#import "../premable.typ": h2
+#import "../preamble.typ": h2, high-frequency-table
 #h2([B. PDPO Tests])
-#table(
+#high-frequency-table(
   columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
   inset: 4pt,
   stroke: .4pt,
   align: left + top,
-  [*Test / Doctrine*], [*Authority*], [*Checklist (Exam Steps)*], [*Output Line*],
+  [*Test / Doctrine*],
+  [*Authority*],
+  [*Checklist (Exam Steps)*],
+  [*Output Line*],
   [Personal data threshold test],
   [Cap.486 s.2(1)],
   [是否关乎在世个人 + 能否直接/间接识别 + 是否由 data user 控制/持有于相关处理场景。],

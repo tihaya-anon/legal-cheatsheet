@@ -1,12 +1,15 @@
-#import "../premable.typ": h2
+#import "../preamble.typ": h2, high-frequency-table
 
 #h2([A. Copyright Tests])
-#table(
+#high-frequency-table(
   columns: (1.9fr, 2.5fr, 3.8fr, 3.1fr),
   inset: 4pt,
   stroke: .4pt,
   align: left + top,
-  [*Test / Doctrine*], [*Authority*], [*Checklist (Exam Steps)*], [*Output Line*],
+  [*Test / Doctrine*],
+  [*Authority*],
+  [*Checklist (Exam Steps)*],
+  [*Output Line*],
   [Employee vs freelancer ownership test],
   [Cap.528 s.14(1), s.15(1), s.15(2)],
   [1) 先定身份：employee 或 independent contractor；2) employee 则查是否 in course of employment（事实判断）；3) freelancer/commissioned 则以合同分配为主；4) 若合同未写明归属，补写 s.15(2) 两项法定权利。],

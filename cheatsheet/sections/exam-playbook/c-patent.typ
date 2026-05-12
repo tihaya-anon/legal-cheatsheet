@@ -1,12 +1,11 @@
-#import "../premable.typ": h2
+#import "../preamble.typ": exam-playbook-table, h2
 
 #h2([C. Patent Questions])
-#table(
-  columns: (1.5fr, 2.4fr, 3.6fr, 3.5fr),
-  inset: 4pt,
-  stroke: .4pt,
-  align: left + top,
-  [*Issue Type*], [*Statutory Route*], [*What to Prove (Checklist)*], [*Ready-to-Use Answer Skeleton*],
+#exam-playbook-table(
+  [*Issue Type*],
+  [*Statutory Route*],
+  [*What to Prove (Checklist)*],
+  [*Ready-to-Use Answer Skeleton*],
   [Excluded subject matter],
   [s.9A, s.9A(2)-(6)],
   [先定 claim 的“真正内容”；再逐项看是否落入发现/数学方法/商业方法/治疗方法等排除。若有技术效果与技术手段，论证其不只是抽象规则。],

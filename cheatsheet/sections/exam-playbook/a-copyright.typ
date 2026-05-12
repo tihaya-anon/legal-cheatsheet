@@ -1,12 +1,11 @@
-#import "../premable.typ": h2
+#import "../preamble.typ": exam-playbook-table, h2
 
 #h2([A. Copyright Questions])
-#table(
-  columns: (1.5fr, 2.4fr, 3.6fr, 3.5fr),
-  inset: 4pt,
-  stroke: .4pt,
-  align: left + top,
-  [*Issue Type*], [*Statutory Route*], [*What to Prove (Checklist)*], [*Ready-to-Use Answer Skeleton*],
+#exam-playbook-table(
+  [*Issue Type*],
+  [*Statutory Route*],
+  [*What to Prove (Checklist)*],
+  [*Ready-to-Use Answer Skeleton*],
   [Identify works],
   [s.2(1), s.4],
   [逐项拆分：文本、图表、源代码、目标代码、字幕、数据库结构等是否是独立作品类别。],

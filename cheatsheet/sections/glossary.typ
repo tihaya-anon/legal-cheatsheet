@@ -1,4 +1,4 @@
-#import "premable.typ": h1
+#import "preamble.typ": h1
 
 #h1([中英术语表])
 #table(
