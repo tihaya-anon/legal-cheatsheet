@@ -16,6 +16,20 @@ CAP_MAP = {
     "c-patent.typ": ("Cap.514", ROOT / "Cap.514.html"),
 }
 
+CELL = "single"
+
+
+def def_cell(cell: str) -> str:
+    if cell == "dual":
+        return "source-statutes-dual-cell"
+    return "source-statutes-cell"
+
+
+def build_cell(cell: str, zh: str, en: str = None) -> str:
+    if cell == "dual":
+        return f"source-statutes-dual-cell({zh}, {en})"
+    return f"source-statutes-cell({zh})"
+
 
 def normalize_space(s: str) -> str:
     return re.sub(r"\s+", " ", s.replace("\xa0", " ")).strip()
@@ -262,16 +276,16 @@ def main() -> None:
         typst_path = typst_dir / f"{typ_name}"
         records = jsonl_by_cap[cap_name]
         lines = [
-            '#import "../preamble.typ": source-statutes-table-compact, source-statutes-cell, h2',
+            f'#import "../preamble.typ": source-statutes-table, {def_cell(CELL)}, h2',
             "\n",
             "#h2([])\n",
-            "#source-statutes-table-compact(\n",
+            "#source-statutes-table(\n",
             "  [*Section*],\n  [*Text*],\n\n",
         ]
         for record in records:
             lines.append(
                 f"  {typst_str(str(record['statutes']))},\n"
-                f"  source-statutes-cell({typst_str(str(record['zh']))}, {typst_str(str(record['en']))}),\n\n"
+                f"  {build_cell(CELL,typst_str(str(record['zh'])),typst_str(str(record['en'])))},\n\n"
             )
         lines.append(")")
         with typst_path.open("w", encoding="utf-8") as f:
