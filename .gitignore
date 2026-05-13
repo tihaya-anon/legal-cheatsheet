@@ -2,3 +2,4 @@
 *.ttf
 Cap.*
 *.jsonl
+__pycache__/
