@@ -190,6 +190,11 @@ def md_cell(s: str) -> str:
     return s.replace("|", "\\|")
 
 
+def typst_str(s: str) -> str:
+    # Emit a Typst string literal safe for arbitrary statute text.
+    return '"' + s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ") + '"'
+
+
 def main() -> None:
     out = ["# Core Statutes Mentioned Provisions (from crawled HTML)", ""]
     jsonl_by_cap: dict[str, list[dict[str, str | bool]]] = {}
@@ -251,7 +256,7 @@ def main() -> None:
             for record in records:
                 f.write(json.dumps(record, ensure_ascii=False) + "\n")
         print(f"Wrote: {jsonl_path}")
-    typst_dir: Path = ROOT.parent / "cheatsheet" / "sections" / "source-statues"
+    typst_dir: Path = ROOT.parent / "cheatsheet" / "sections" / "source-statutes"
     typst_dir.mkdir(exist_ok=True)
     for typ_name, (cap_name, html_path) in CAP_MAP.items():
         typst_path = typst_dir / f"{typ_name}"
@@ -265,7 +270,9 @@ def main() -> None:
         ]
         for record in records:
             lines.append(
-                f"  [{record['statutes']}],\n  [{record['zh']}],\n  [{record['en']}],\n\n"
+                f"  {typst_str(str(record['statutes']))},\n"
+                f"  {typst_str(str(record['zh']))},\n"
+                f"  {typst_str(str(record['en']))},\n\n"
             )
         lines.append(")")
         with typst_path.open("w", encoding="utf-8") as f:

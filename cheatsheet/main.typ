@@ -12,4 +12,6 @@
 
 #include "sections/answer-phrases.typ"
 
-// #include "sections/glossary.typ"
+#include "sections/glossary.typ"
+
+#include "sections/source-statutes/index.typ"
