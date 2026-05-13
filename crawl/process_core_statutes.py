@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 import json
+import copy
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -32,7 +33,11 @@ def build_cell(cell: str, zh: str, en: str = None) -> str:
 
 
 def normalize_space(s: str) -> str:
-    return re.sub(r"\s+", " ", s.replace("\xa0", " ")).strip()
+    s = re.sub(r"\s+", " ", s.replace("\xa0", " ")).strip()
+    s = re.sub(r"\(\s*([0-9A-Za-z]+)\s*\)", r"(\1)", s)
+    # Remove spaces accidentally inserted between CJK characters.
+    s = re.sub(r"(?<=[\u4e00-\u9fff])\s+(?=[\u4e00-\u9fff])", "", s)
+    return s
 
 
 def extract_refs_from_typ(typ_text: str) -> list[str]:
@@ -40,7 +45,14 @@ def extract_refs_from_typ(typ_text: str) -> list[str]:
     data_cells = cells[4:]
     refs = []
     for i in range(0, len(data_cells), 4):
-        refs.append(data_cells[i].strip())
+        cell = data_cells[i].strip()
+        # A cell may contain multiple references, e.g. "ss.41-45 ss.55-59".
+        parts = re.findall(
+            r"(?:ss\.\s*\d+[a-z]?\s*[-–—]\s*\d+[a-z]?|s\.\s*\d+[a-z]?(?:\s*\([0-9a-z]+\))*)",
+            cell,
+            flags=re.I,
+        )
+        refs.extend(p.strip() for p in (parts or [cell]))
 
     out: list[str] = []
     seen = set()
@@ -52,7 +64,8 @@ def extract_refs_from_typ(typ_text: str) -> list[str]:
 
 
 def norm_ref(ref: str) -> str:
-    return re.sub(r"\s+", "", ref).lower()
+    r = re.sub(r"\s+", "", ref).lower()
+    return r.replace("–", "-").replace("—", "-")
 
 
 def ref_to_temporalid(ref: str) -> str | None:
@@ -78,8 +91,10 @@ def sort_token_key(token: str):
 
 
 def expand_simple_section_ref(ref: str, by_temporalid: dict[str, list]) -> list[str]:
-    # Expand only plain section refs like s.198 -> s.198(1), s.198(2) / s.198(a), ...
-    if not re.fullmatch(r"s\.\d+[a-zA-Z]*", ref.strip()):
+    # Expand refs by one level:
+    # s.198 -> s.198(1), s.198(2) / s.198(a), ...
+    # s.2(1) -> s.2(1)(a), s.2(1)(b), ...
+    if not re.fullmatch(r"s\.\d+[a-zA-Z]*(?:\([0-9a-zA-Z]+\))?", ref.strip()):
         return [ref]
 
     base_tid = ref_to_temporalid(ref)
@@ -107,10 +122,41 @@ def expand_simple_section_ref(ref: str, by_temporalid: dict[str, list]) -> list[
     return [ref] + expanded
 
 
+def parent_ref(ref: str) -> str | None:
+    r = ref.strip()
+    m = re.fullmatch(r"(s\.\d+[a-zA-Z]*)\([0-9a-zA-Z]+\)", r)
+    if m:
+        return m.group(1)
+    return None
+
+
+def expand_section_range_ref(ref: str) -> list[str]:
+    r = norm_ref(ref)
+    m = re.fullmatch(r"ss\.(\d+)-(\d+)", r)
+    if not m:
+        return [ref]
+    start = int(m.group(1))
+    end = int(m.group(2))
+    if end < start:
+        start, end = end, start
+    return [f"s.{n}" for n in range(start, end + 1)]
+
+
 def expand_refs(refs: list[str], by_temporalid: dict[str, list]) -> list[str]:
     out: list[str] = []
     seen = set()
     for ref in refs:
+        range_expanded = expand_section_range_ref(ref)
+        if len(range_expanded) > 1:
+            for rr in range_expanded:
+                if rr not in seen:
+                    out.append(rr)
+                    seen.add(rr)
+            continue
+        p = parent_ref(ref)
+        if p and p not in seen:
+            out.append(p)
+            seen.add(p)
         for r in expand_simple_section_ref(ref, by_temporalid):
             if r not in seen:
                 out.append(r)
@@ -118,9 +164,123 @@ def expand_refs(refs: list[str], by_temporalid: dict[str, list]) -> list[str]:
     return out
 
 
+def ref_sort_key(ref: str):
+    r = norm_ref(ref)
+    m = re.fullmatch(r"s\.(\d+)([a-z]?)(.*)", r)
+    if m:
+        sec_num = int(m.group(1))
+        sec_suffix = m.group(2)
+        tail = m.group(3)
+        toks = re.findall(r"\(([0-9a-z]+)\)", tail)
+        key = [0, sec_num, sec_suffix]
+        for t in toks:
+            if t.isdigit():
+                key.extend([0, int(t)])
+            else:
+                key.extend([1, t])
+        return tuple(key)
+    return (9, r)
+
+
 def node_text(node, limit: int = 1400) -> str:
     text = normalize_space(node.get_text(" ", strip=True))
     return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
+def strip_subsections_text(text: str) -> str:
+    # Keep only the lead-in text before top-level subsection markers like "(1)".
+    m = re.search(r"\(\s*1\s*\)", text)
+    if not m:
+        return text
+    head = normalize_space(text[: m.start()])
+    return head or text
+
+
+def text_with_direct_children(node, skip_classes: set[str], limit: int = 1400) -> str:
+    parts: list[str] = []
+    for child in getattr(node, "children", []):
+        if getattr(child, "name", None) is None:
+            continue
+        cls = set(child.get("class") or [])
+        if cls & skip_classes:
+            continue
+        t = normalize_space(child.get_text(" ", strip=True))
+        if t:
+            parts.append(t)
+    text = normalize_space(" ".join(parts))
+    if not text:
+        return node_text(node, limit)
+    return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
+def node_text_without_classes(node, skip_classes: set[str], limit: int = 1400) -> str:
+    cloned = copy.copy(node)
+    for t in list(cloned.find_all(True)):
+        if not getattr(t, "attrs", None):
+            continue
+        cls = set(t.get("class") or [])
+        if cls & skip_classes:
+            t.decompose()
+    text = normalize_space(cloned.get_text(" ", strip=True))
+    if not text:
+        return node_text(node, limit)
+    return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
+def is_leadin_only_text(text: str) -> bool:
+    t = normalize_space(text)
+    # Cases like "(2) 有关条件是——" / "(2) The conditions are—"
+    return bool(re.fullmatch(r"\([0-9a-zA-Z]+\)\s*[^。；;:.!?]*[—-]+\s*", t))
+
+
+def subsection_has_nested_items(node) -> bool:
+    for p in node.find_all("div", class_="hklm_paragraph", recursive=False):
+        for t in p.find_all("div", recursive=False):
+            cls = set(t.get("class") or [])
+            if any(c.startswith("hklm_subparagraph") for c in cls):
+                return True
+    return False
+
+
+def parse_section_ref(ref: str) -> tuple[str, list[str]] | None:
+    r = ref.strip()
+    m = re.fullmatch(r"s\.(\d+[a-zA-Z]*)((?:\([0-9a-zA-Z]+\))*)", r)
+    if not m:
+        return None
+    sec = m.group(1).lower()
+    tail = m.group(2)
+    tokens = re.findall(r"\(([0-9a-zA-Z]+)\)", tail)
+    return sec, tokens
+
+
+def node_num_token(node) -> str:
+    num = node.find("div", class_="hklm_num")
+    if not num:
+        return ""
+    t = normalize_space(num.get_text(" ", strip=True))
+    t = t.strip().strip("()").replace(" ", "")
+    return t.lower()
+
+
+def find_child_by_num(parent, token: str):
+    token_l = token.lower()
+    for child in parent.find_all("div", class_=re.compile(r"^hklm_"), recursive=False):
+        cls = set(child.get("class") or [])
+        if not ({"hklm_subsection", "hklm_paragraph"} & cls):
+            continue
+        if node_num_token(child) == token_l:
+            return child
+    return None
+
+
+def find_node_by_ref_tokens(section_node, tokens: list[str]):
+    cur = section_node
+    for tok in tokens:
+        nxt = find_child_by_num(cur, tok)
+        if not nxt:
+            return None
+        cur = nxt
+    return cur
 
 
 def build_indices(soup: BeautifulSoup):
@@ -154,17 +314,55 @@ def pick_lang_node(nodes: list, lang: str):
                     return n
                 break
             p = p.parent
-    return nodes[0]
+    return None
 
 
 def extract_entry_by_lang(
     ref: str, by_temporalid, by_name, full_text: str, lang: str
 ) -> str | None:
+    r0 = ref.strip()
+    parsed = parse_section_ref(r0)
+    is_plain_section_ref = bool(parsed and len(parsed[1]) == 0)
+    is_subsection_ref = bool(parsed and len(parsed[1]) == 1)
+
+    # Prefer structure-based lookup by displayed numbering to avoid temporalid mismatches.
+    if parsed:
+        sec, tokens = parsed
+        sec_nodes = by_name.get(f"s{sec}", [])
+        sec_node = pick_lang_node(sec_nodes, lang)
+        if sec_node:
+            target = (
+                sec_node if not tokens else find_node_by_ref_tokens(sec_node, tokens)
+            )
+            if target:
+                if not tokens:
+                    return node_text_without_classes(target, {"hklm_subsection"})
+                if len(tokens) == 1:
+                    stripped = node_text_without_classes(target, {"hklm_paragraph"})
+                    if is_leadin_only_text(stripped) and subsection_has_nested_items(
+                        target
+                    ):
+                        return node_text(target)
+                    return stripped
+                return node_text(target)
+
+    # Fallback to temporalid when structure lookup does not resolve.
     tid = ref_to_temporalid(ref)
-    if tid and tid.lower() in by_temporalid:
-        n = pick_lang_node(by_temporalid[tid.lower()], lang)
-        if n:
-            return node_text(n)
+    if tid:
+        nodes = by_temporalid.get(tid.lower())
+        if nodes:
+            n = pick_lang_node(nodes, lang)
+            if not n:
+                return None
+            text = node_text(n)
+            if is_plain_section_ref:
+                return node_text_without_classes(n, {"hklm_subsection"})
+            if is_subsection_ref:
+                stripped = node_text_without_classes(n, {"hklm_paragraph"})
+                if is_leadin_only_text(stripped) and subsection_has_nested_items(n):
+                    return node_text(n)
+                return stripped
+            return text
 
     r = norm_ref(ref)
     if r.startswith("s."):
@@ -174,13 +372,20 @@ def extract_entry_by_lang(
             nodes = by_name.get(sec_name.lower(), [])
             n = pick_lang_node(nodes, lang)
             if n:
-                return node_text(n)
+                text = node_text(n)
+                if is_plain_section_ref:
+                    return node_text_without_classes(n, {"hklm_subsection"})
+                return text
 
     if r.startswith("ss."):
-        m = re.match(r"ss\.(\d+)-(\d+)", r)
+        m = re.match(r"ss\.(\d+[a-z]?)-(\d+[a-z]?)$", r)
         if m:
-            start = int(m.group(1))
-            end = int(m.group(2))
+            start_s = m.group(1)
+            end_s = m.group(2)
+            if not start_s.isdigit() or not end_s.isdigit():
+                return None
+            start = int(start_s)
+            end = int(end_s)
             parts = []
             for n in range(start, end + 1):
                 sec = pick_lang_node(by_name.get(f"s{n}".lower(), []), lang)
@@ -206,7 +411,13 @@ def md_cell(s: str) -> str:
 
 def typst_str(s: str) -> str:
     # Emit a Typst string literal safe for arbitrary statute text.
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ") + '"'
+    s = normalize_space(s).replace("\n", " ")
+    return (
+        '"'
+        + s.replace("\\", "\\\\")
+        .replace('"', '\\"')
+        + '"'
+    )
 
 
 def main() -> None:
@@ -223,6 +434,7 @@ def main() -> None:
         by_temporalid, by_name = build_indices(soup)
         full_text = normalize_space(soup.get_text(" ", strip=True))
         refs = expand_refs(refs, by_temporalid)
+        refs = sorted(refs, key=ref_sort_key)
 
         out.append(f"## {cap_name}")
         out.append("")
@@ -290,6 +502,7 @@ def main() -> None:
         lines.append(")")
         with typst_path.open("w", encoding="utf-8") as f:
             f.writelines(lines)
+        print(f"Wrote: {typst_path}")
     index_path = typst_dir / "index.typ"
     with index_path.open("w", encoding="utf-8") as f:
         f.writelines(
