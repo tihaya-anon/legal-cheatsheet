@@ -4,5 +4,13 @@
     "${env:HOME}/.local/share/fonts"
   ],
   "tinymist.systemFonts": true,
-  "tinymist.formatterIndentSize": 2
+  "tinymist.formatterIndentSize": 2,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "hide-files.files": []
 }

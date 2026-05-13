@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import re
+import json
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -78,7 +79,7 @@ def expand_simple_section_ref(ref: str, by_temporalid: dict[str, list]) -> list[
         prefix = base_l + "_"
         if not k.startswith(prefix):
             continue
-        rest = k[len(prefix):]
+        rest = k[len(prefix) :]
         if "_" in rest:
             continue
         if re.fullmatch(r"[0-9a-z]+", rest):
@@ -130,7 +131,11 @@ def pick_lang_node(nodes: list, lang: str):
     for n in nodes:
         p = n
         while p is not None:
-            if getattr(p, "name", None) == "div" and p.get("class") and "hklm_main" in p.get("class"):
+            if (
+                getattr(p, "name", None) == "div"
+                and p.get("class")
+                and "hklm_main" in p.get("class")
+            ):
                 if p.get("lang") == lang:
                     return n
                 break
@@ -138,7 +143,9 @@ def pick_lang_node(nodes: list, lang: str):
     return nodes[0]
 
 
-def extract_entry_by_lang(ref: str, by_temporalid, by_name, full_text: str, lang: str) -> str | None:
+def extract_entry_by_lang(
+    ref: str, by_temporalid, by_name, full_text: str, lang: str
+) -> str | None:
     tid = ref_to_temporalid(ref)
     if tid and tid.lower() in by_temporalid:
         n = pick_lang_node(by_temporalid[tid.lower()], lang)
@@ -185,8 +192,10 @@ def md_cell(s: str) -> str:
 
 def main() -> None:
     out = ["# Core Statutes Mentioned Provisions (from crawled HTML)", ""]
+    jsonl_by_cap: dict[str, list[dict[str, str | bool]]] = {}
 
     for typ_name, (cap_name, html_path) in CAP_MAP.items():
+        cap_records: list[dict[str, str | bool]] = []
         typ_text = (CORE_DIR / typ_name).read_text(encoding="utf-8")
         refs = extract_refs_from_typ(typ_text)
 
@@ -203,22 +212,75 @@ def main() -> None:
 
         found = 0
         for ref in refs:
-            zh = extract_entry_by_lang(ref, by_temporalid, by_name, full_text, "zh-Hant-HK")
+            zh = extract_entry_by_lang(
+                ref, by_temporalid, by_name, full_text, "zh-Hant-HK"
+            )
             en = extract_entry_by_lang(ref, by_temporalid, by_name, full_text, "en")
+            is_found = bool(zh or en)
             if zh or en:
                 found += 1
             else:
                 zh = f"NOT FOUND in {cap_name}"
                 en = f"NOT FOUND in {cap_name}"
-            out.append(f"| {md_cell(ref)} | {md_cell(zh or '')} | {md_cell(en or '')} |")
+            out.append(
+                f"| {md_cell(ref)} | {md_cell(zh or '')} | {md_cell(en or '')} |"
+            )
+            cap_records.append(
+                {
+                    "cap": cap_name,
+                    "statutes": ref,
+                    "zh": zh or "",
+                    "en": en or "",
+                    "found": is_found,
+                }
+            )
 
         out.append("")
         out.append(f"Matched: {found}/{len(refs)}")
         out.append("")
+        jsonl_by_cap[cap_name] = cap_records
 
     out_path = ROOT / "core_statutes_matched.md"
     out_path.write_text("\n".join(out), encoding="utf-8")
     print(f"Wrote: {out_path}")
+
+    for cap_name, records in jsonl_by_cap.items():
+        cap_token = cap_name.replace(".", "").replace(" ", "_")
+        jsonl_path = ROOT / f"{cap_token}.jsonl"
+        with jsonl_path.open("w", encoding="utf-8") as f:
+            for record in records:
+                f.write(json.dumps(record, ensure_ascii=False) + "\n")
+        print(f"Wrote: {jsonl_path}")
+    typst_dir: Path = ROOT.parent / "cheatsheet" / "sections" / "source-statues"
+    typst_dir.mkdir(exist_ok=True)
+    for typ_name, (cap_name, html_path) in CAP_MAP.items():
+        typst_path = typst_dir / f"{typ_name}"
+        records = jsonl_by_cap[cap_name]
+        lines = [
+            '#import "../preamble.typ": source-statutes-table, h2',
+            "\n",
+            "#h2([])\n",
+            "#source-statutes-table(\n",
+            "  [*Section*],\n  [*ZH*],\n  [*EN*],\n\n",
+        ]
+        for record in records:
+            lines.append(
+                f"  [{record['statutes']}],\n  [{record['zh']}],\n  [{record['en']}],\n\n"
+            )
+        lines.append(")")
+        with typst_path.open("w", encoding="utf-8") as f:
+            f.writelines(lines)
+    index_path = typst_dir / "index.typ"
+    with index_path.open("w", encoding="utf-8") as f:
+        f.writelines(
+            [
+                '#import "../preamble.typ": h1\n',
+                "#h1([Source Statutes])\n",
+                '#include "a-copyright.typ"\n',
+                '#include "b-pdpo.typ"\n',
+                '#include "c-patent.typ"\n',
+            ]
+        )
 
 
 if __name__ == "__main__":
