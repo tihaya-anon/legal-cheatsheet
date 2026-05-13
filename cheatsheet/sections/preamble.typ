@@ -8,6 +8,19 @@
   align: left + top,
   ..c,
 )
+#let source-statutes-table-compact(..c) = table(
+  columns: (0.95fr, 8.55fr),
+  inset: 1.6pt,
+  stroke: .35pt,
+  align: left + top,
+  ..c,
+)
+#let source-statutes-cell(zh, en) = [
+  #zh
+  #linebreak()
+  #linebreak()
+  #en
+]
 #let core-statutes-table(..c) = table(
   columns: (0.8fr, 1.45fr, 3.9fr, 2.4fr),
   inset: 5pt,

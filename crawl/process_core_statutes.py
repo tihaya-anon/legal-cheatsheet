@@ -262,17 +262,16 @@ def main() -> None:
         typst_path = typst_dir / f"{typ_name}"
         records = jsonl_by_cap[cap_name]
         lines = [
-            '#import "../preamble.typ": source-statutes-table, h2',
+            '#import "../preamble.typ": source-statutes-table-compact, source-statutes-cell, h2',
             "\n",
             "#h2([])\n",
-            "#source-statutes-table(\n",
-            "  [*Section*],\n  [*ZH*],\n  [*EN*],\n\n",
+            "#source-statutes-table-compact(\n",
+            "  [*Section*],\n  [*Text*],\n\n",
         ]
         for record in records:
             lines.append(
                 f"  {typst_str(str(record['statutes']))},\n"
-                f"  {typst_str(str(record['zh']))},\n"
-                f"  {typst_str(str(record['en']))},\n\n"
+                f"  source-statutes-cell({typst_str(str(record['zh']))}, {typst_str(str(record['en']))}),\n\n"
             )
         lines.append(")")
         with typst_path.open("w", encoding="utf-8") as f:
