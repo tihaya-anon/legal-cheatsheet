@@ -4,14 +4,16 @@
 #set heading(numbering: none)
 
 
-#include "sections/core-statutes/index.typ"
-
 #include "sections/exam-playbook/index.typ"
 
 #include "sections/high-frequency-tests/index.typ"
 
 #include "sections/answer-phrases.typ"
 
+#include "sections/exam-drawbacks.typ"
+
 #include "sections/glossary.typ"
+
+#include "sections/core-statutes/index.typ"
 
 #include "sections/source-statutes/index.typ"

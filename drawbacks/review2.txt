@@ -1,0 +1,84 @@
+Review Report: Drawbacks in Copyright Ordinance (CO) Evaluation
+
+1. Introduction and Purpose of Review
+
+This report synthesizes critical weaknesses and methodological misunderstandings identified during the evaluation of the Copyright Ordinance (CO). In professional and academic legal analysis, precision regarding statutory sub-sections and the underlying logic of the law is non-negotiable. This document serves as a corrective guide to ensure rigorous adherence to Hong Kong standards, specifically addressing the nuances of "the public," adaptation chains, and the high threshold for criminal liability.
+
+2. Legal Delineation of "The Public" and Restricted Acts
+
+A frequent flaw in copyright analysis is the imprecise application of "public" thresholds. Under the CO, the distinction between private and public settings is a prerequisite for specific infringement claims.
+
+Conceptual Correction: The "In Public" Threshold
+
+Pursuant to Section 27, an act is "in public" if it falls outside a "domestic or quasi-domestic" setting. The evaluator must look beyond the number of attendees to the professional character of the audience. In a corporate setting, staff members and seminar attendees constitute a "sector of the public" because the copyright owner has a distinct economic interest in such an audience; for example, a programming team represents a potential market for a software owner’s proprietary ideas.
+
+High-Level Nuance: The Artistic Work Loophole
+
+It is a fatal error to apply Section 27 to artistic works. Section 27 (Showing in public) only applies to literary, dramatic, and musical works. When diagrams (artistic works) are shown on a screen during a business seminar, the claim must instead be analyzed under Section 31(1)(c)—exhibiting in public in the course of business. This is a secondary infringement, which, unlike the primary act in Section 27, requires proving the defendant's mens rea.
+
+Distinction of Rights: Section 27 vs. Section 28A
+
+Evaluators must strictly distinguish between showing a work locally and communicating it electronically.
+
+Table: Section 27 vs. Section 28A
+
+Feature	Section 27: Performance/Showing in Public	Section 28A: Communication to the Public
+Primary Act	Visual or acoustic presentation to an audience present at the site.	Electronic delivery (broadcasting, cabling, or making available).
+Technical Mode	Projecting on a screen in a room or hall.	Delivery to a viewer's individual device (e.g., streaming/uploading).
+Applicability	Literary, dramatic, and musical works only.	All categories of work.
+Knowledge Required	None (Strict Liability).	None (Strict Liability).
+Seminar Example	Projecting textual passages onto a wall for a team.	Uploading the same passages to an internal cloud for remote access.
+
+3. Application of Section 29: Adaptations of Computer Programs
+
+Evaluations often fail to apply the specific statutory definitions for computer program "translations" and the resulting chains of liability.
+
+Statutory Definition and Technical Nuance
+
+Under Section 29(4), a "translation" of a computer program includes converting it between different languages (e.g., from Pascal to C) or compiling/decompiling code.
+
+* Alteration vs. Adaptation: Analysts should prioritize claims under Section 23 (Copying) for unaltered substantial parts. Proving the copying of original procedures is often more efficient than alleging an adaptation of the altered sections, as the former avoids the technical complexities of defining the scope of an "arrangement."
+
+Infringement Chains (Section 29(2))
+
+A critical oversight is the failure to track liability through adaptations. Under s.29(2), performing a restricted act (copying or issuing) on an adaptation infringes the original work.
+
+* Example: If Party A owns the copyright to a Pascal program, and Party B translates it into C, any third party (Party C) who copies the C version infringes Party A's original copyright. The chain of liability remains anchored to the original expression.
+
+4. Criminal Liability Nuances: Prejudicial Effect vs. Commercial Volume
+
+Distinguishing between civil secondary infringement (s.31) and criminal offences (s.118) is a foundational requirement.
+
+The Standard of Mens Rea
+
+Unlike primary infringement, secondary and criminal liabilities require proof of mens rea. The defendant must "know or have reason to believe" the copy in question is an infringing copy. "Reason to believe" constitutes constructive knowledge, where notice of facts would suggest to a reasonable person that a breach was occurring.
+
+The Prejudicial Effect Test: Section 118(1)(g)
+
+For distribution in the course of a business that does not deal in infringing copies (governed by s.118(1)(g)), criminal liability only triggers if the distribution reaches a "prejudicial effect" under Section 118(2AA).
+
+* The Economic Prejudice Test: Prejudice is measured against the copyright owner’s specific trade. For example, if an insurance company (HKI) owns the copyright to software diagrams, an employee's internal distribution of those diagrams does not affect HKI's insurance business. Because HKI is not in the trade of selling software diagrams, the distribution does not substitute for a sale HKI would have made. Thus, economic prejudice is not established, and criminal liability is unlikely.
+
+5. Prohibited Practices and Methodological Errors
+
+The following practices constitute fatal flaws in legal evaluation and must be strictly avoided:
+
+1. Use of Foreign Terminology: The use of US legal terms such as "derivative works" or "public display rights" is strictly forbidden. Analysts must use CO-specific terms: "adaptation" and "showing the work in public."
+2. Paragraph Lumping: Each restricted act (Copying s.23, Issuing s.24, etc.) must be analyzed in a separate, dedicated paragraph. Failure to segregate these acts renders the analysis disorganised and legally imprecise.
+3. Vague Statutory Citations: Citing broad sections (e.g., "Section 118") is unacceptable. The exact sub-clause (e.g., "s.118(1)(g)") must be specified to demonstrate a professional understanding of the statutory threshold.
+4. Erroneous "Compilation" Assumptions: A work is only a "compilation" if it is a selection/arrangement of pre-existing materials not created for that specific project. If a document or diagram was created specifically for a project (e.g., an HKI design document), it is a primary literary or artistic work, not a compilation.
+5. Misapplying Authorization: "Authorization" under s.22(2) means to "sanction, approve, or countenance" the infringement (CBS Songs v Amstrad). Evaluators must apply the Moorhouse Test: does the person control the means of infringement and make them available to others while having reason to suspect they will be used for infringement? Mere facilitation is not authorization.
+6. Conflating Liability Types: In civil law, an employer is vicariously liable for acts in the "course of employment." In criminal law (s.118), the employer is only liable if they are "personally involved" in the commission of the crime.
+
+6. Summary Review Checklist
+
+Use this checklist to self-audit all future evaluations:
+
+* [ ] Substantiality: Was a qualitative test applied, focusing on the importance of the part copied rather than a quantitative word count?
+* [ ] Hypothetical Manufacture Test (s.35(3)): For imported copies, did you test if its making in Hong Kong would have constituted an infringement?
+* [ ] Mens Rea Check: For all s.31 or s.118 claims, did you verify the "know or have reason to believe" standard?
+* [ ] Artistic Work Display: Did you correctly identify that showing diagrams on a screen must be analyzed under s.31(1)(c) rather than s.27?
+* [ ] Liability Distinction: Is the civil analysis based on "course of employment" and the criminal analysis based on "personal involvement"?
+* [ ] Adaptation Chain: Did you apply s.29(2) to show how copying a translation infringes the original source code?
+* [ ] Terminology: Is the report free of "derivative works" and other US-centric concepts?
+* [ ] Compilation Status: Have you confirmed the work is not a compilation by verifying the materials were not pre-existing?
