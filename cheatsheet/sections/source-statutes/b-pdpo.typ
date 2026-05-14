@@ -227,7 +227,7 @@
   source-statutes-cell("35A. 第6A部的释义(编辑修订——2013年第1号编辑修订纪录)"),
 
   "s.35A(1)",
-  source-statutes-cell("(1)在本部中——同意(consent)就在直接促销中使用个人资料而言，或就提供个人资料以供在直接促销中使用而言，包括表示不反对该项使用或提供； 回应途径(response channel)指由资料使用者根据第35C(2)(c)或 35J(2)(c)条向资料当事人提供的途径； 直接促销(direct marketing)指透过直接促销方法——直接促销方法(direct marketing means)指——促销标的(marketing subject)就直接促销而言， 指——许可种类个人资料(permitted kind of personal data)就资料当事人对某项拟进行的个人资料使用或提供的同意而言，指符合以下条件的种类的个人资料——许可类别人士(permitted class of persons)就资料当事人对某项拟进行的个人资料提供的同意而言，指符合以下条件的类别的人士——许可类别促销标的(permitted class of marketing subjects)就资料当事人对某项拟进行的个人资料使用或提供的同意而言，指符合以下条件的类别的促销标的——"),
+  source-statutes-cell("(1)在本部中——“同意”(consent)包括表示不反对；“回应途径”(response channel)指第35C(2)(c)或35J(2)(c)所述途径；“直接促销”(direct marketing)指透过直接促销方法作货品/服务要约或广告，或为慈善、文化、公益、康体、政治等目的募捐；并定义“直接促销方法”“促销标的”“许可种类个人资料”“许可类别人士”“许可类别促销标的”等术语。"),
 
   "s.35A(1)(a)",
   source-statutes-cell("(a)要约提供货品、设施或服务，或为该等货品、设施或服务可予提供而进行广告宣传；或"),
