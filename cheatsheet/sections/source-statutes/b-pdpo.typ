@@ -5,28 +5,28 @@
   [*Text*],
 
   "DPP1",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第1原则——收集个人资料的目的及方式：除非个人资料为与资料使用者职能或活动直接有关的合法目的而收集、收集对该目的属必需或直接有关、资料足够但不超乎适度，否则不得收集；并须以合法及在所有情况下属公平的方法收集；从资料当事人收集时须在收集时或之前告知提供责任/后果、使用目的、可能承转人类别，以及查阅/改正权利与联络资料。"),
 
   "DPP2",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第2原则——个人资料的准确性及保留期间：须采取所有切实可行步骤确保资料在其使用目的下准确；若有合理理由相信不准确，则在更正前不得使用或应删除；如切实可行须通知曾获披露的不准确资料接收者；并须确保保存时间不超过实现该使用目的(包括直接有关目的)所需时间。"),
 
   "DPP3",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第3原则——个人资料的使用：如无资料当事人的订明同意，个人资料不得用于新目的；“新目的”指收集时拟使用目的及其直接有关目的以外的任何目的。"),
 
   "DPP4",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第4原则——个人资料的保安：须采取所有切实可行步骤保障资料免受未获准许或意外查阅、处理、删除、丧失或使用，并须考虑资料种类及潜在损害、储存地点、设备保安措施、可查阅者操守及能力、传送保安措施。"),
 
   "DPP5",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第5原则——资讯须在一般情况下可提供：须采取所有切实可行步骤，确保任何人能确定资料使用者在个人资料方面的政策及实务、获告知其持有个人资料的种类，以及该等资料为或将会为何主要目的而使用。"),
 
   "DPP6",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第6原则——查阅个人资料：资料当事人有权确定资料使用者是否持有其个人资料，并要求在合理时间内、以合理方式、在不过度费用下查阅清楚易明形式的个人资料；如被拒绝可获提供理由并提出反对，亦可要求改正及就拒绝改正获理由和反对。"),
 
   "Part 6A",
-  source-statutes-cell("irst collection if, but only if, the data user concerned has complied with the provisions of data protection principle 1(3) in respect of the subsequent collection. 第6A部在直接促销中使用个人资料及提供个人资料以供用于直接促销(第6A部由 2012年第18号第21条增补) Part 6A Use of Personal Data in Direct Marketing and Provision of Personal Data for Use in Direct Marketing (Part 6A added 18 of 2012 s. 21) 35A. 第6A部的释义(1)在本部中——同意(consent)就在直接促销中使用个人资料而言，或就提供个人资料以供在直接促销中使用而言，包括表示不反对该项使用或提供； 回应途径(response channel)指由资料使用者根据第35C(2)(c)或 35J(2)(c)条向资料当事人提供的途径； 直接促销(direct marketing)指透过直接促销方法——(a)要约提供货品、设施或服务，或为该等货品、设施或服务可予提供而进行广告宣传；或(b)为慈善、文化、公益、康体、政治或其他目的索求捐赠或贡献； 直接促销方法(direct marketing means)指——(a)藉邮件、图文传真、电子邮件或其他形式的传讯，向指名特定人士送交资讯或货品；或(b)以特定人士为致电对象的电话通话； 促销标的(marketing subject)就直接促销而言， 指——(a)被要约提供或就其可予提供而进行广告宣传的任何货品、设施或服务；或(b)任何索求捐赠或贡献的目的； 许可种类个人资料(permitted kind of personal data)就资料当事人对某项拟进行的个人资料使用或提供的同意而言，指符合以下条件的种类的个人资料——(a)该种类的个人资料是在该当事人根据第35C(2)(b)(i)或 35J(2)(b)(ii)条获提供的资讯中指明的；及(b)该同意是就该种类的个人资料给予的； 许可类别人士(permitted class of persons)就资料当事人对某项拟进行的个人资料提供的同意而言，指符合以下条件的类别的人士——(a)该类别的人士是在该当事人根据第35J(2)(b)(iii)条获提供的资讯中指明的；及(b)该同意是就该类别的人士给予的； 许可类别促销标的(permitt"),
+  source-statutes-cell("第6A部——在直接促销中使用个人资料及提供个人资料以供用于直接促销（2012年第18号第21条增补）。第35A条定义本部核心概念，包括“同意”（包括表示不反对）、“直接促销”“直接促销方法”“回应途径”“促销标的”“许可种类个人资料”“许可类别人士”“许可类别促销标的”等，为第35C至35M的通知、同意、拒收及违规责任机制提供解释基础。"),
 
   "Part VIII",
-  source-statutes-cell("NOT FOUND in Cap.486"),
+  source-statutes-cell("第8部——豁免：Part 8 heading 为 “Exemptions/豁免”。第51条订明，凡个人资料凭借本部获豁免而不受本条例任何条文管限，在该豁免范围内，该条文不赋予权利亦不施加规定，与该条文有关的其他条文须据此解释。"),
 
   "s.14",
   source-statutes-cell("14. 资料使用者申报表"),
