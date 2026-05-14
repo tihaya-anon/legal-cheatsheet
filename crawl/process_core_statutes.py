@@ -18,6 +18,7 @@ CAP_MAP = {
 }
 
 CELL = "single"
+DASH_CHARS = "—―－"
 
 
 def def_cell(cell: str) -> str:
@@ -35,8 +36,16 @@ def build_cell(cell: str, zh: str, en: str = None) -> str:
 def normalize_space(s: str) -> str:
     s = re.sub(r"\s+", " ", s.replace("\xa0", " ")).strip()
     s = re.sub(r"\(\s*([0-9A-Za-z]+)\s*\)", r"(\1)", s)
+    # Remove useless spaces just inside parentheses.
+    s = re.sub(r"\(\s+", "(", s)
+    s = re.sub(r"\s+\)", ")", s)
     # Remove spaces accidentally inserted between CJK characters.
     s = re.sub(r"(?<=[\u4e00-\u9fff])\s+(?=[\u4e00-\u9fff])", "", s)
+    # Remove spaces between CJK and adjacent parentheses.
+    s = re.sub(r"(?<=[\u4e00-\u9fff])\s+(?=\()", "", s)
+    s = re.sub(r"(?<=\))\s+(?=[\u4e00-\u9fff])", "", s)
+    # Normalize multi-em-dash lead-ins like "— —", "——", "————" to "——".
+    s = re.sub(rf"(?:\s*[{DASH_CHARS}]\s*){{2,}}", "——", s)
     return s
 
 
@@ -48,7 +57,7 @@ def extract_refs_from_typ(typ_text: str) -> list[str]:
         cell = data_cells[i].strip()
         # A cell may contain multiple references, e.g. "ss.41-45 ss.55-59".
         parts = re.findall(
-            r"(?:ss\.\s*\d+[a-z]?\s*[-–—]\s*\d+[a-z]?|s\.\s*\d+[a-z]?(?:\s*\([0-9a-z]+\))*)",
+            r"(?:ss\.\s*\d+[a-z]?\s*[-–—―－]+\s*\d+[a-z]?|s\.\s*\d+[a-z]?(?:\s*\([0-9a-z]+\))*)",
             cell,
             flags=re.I,
         )
@@ -65,7 +74,12 @@ def extract_refs_from_typ(typ_text: str) -> list[str]:
 
 def norm_ref(ref: str) -> str:
     r = re.sub(r"\s+", "", ref).lower()
-    return r.replace("–", "-").replace("—", "-")
+    return (
+        r.replace("–", "-")
+        .replace("—", "-")
+        .replace("―", "-")
+        .replace("－", "-")
+    )
 
 
 def ref_to_temporalid(ref: str) -> str | None:
@@ -230,7 +244,11 @@ def node_text_without_classes(node, skip_classes: set[str], limit: int = 1400) -
 def is_leadin_only_text(text: str) -> bool:
     t = normalize_space(text)
     # Cases like "(2) 有关条件是——" / "(2) The conditions are—"
-    return bool(re.fullmatch(r"\([0-9a-zA-Z]+\)\s*[^。；;:.!?]*[—-]+\s*", t))
+    return bool(
+        re.fullmatch(
+            rf"\([0-9a-zA-Z]+\)\s*[^。；;:.!?]*(?:[{DASH_CHARS}-]\s*)+\s*", t
+        )
+    )
 
 
 def subsection_has_nested_items(node) -> bool:
@@ -434,7 +452,7 @@ def main() -> None:
         by_temporalid, by_name = build_indices(soup)
         full_text = normalize_space(soup.get_text(" ", strip=True))
         refs = expand_refs(refs, by_temporalid)
-        refs = sorted(refs, key=ref_sort_key)
+        refs = sorted(refs, key=lambda x: norm_ref(x))
 
         out.append(f"## {cap_name}")
         out.append("")
