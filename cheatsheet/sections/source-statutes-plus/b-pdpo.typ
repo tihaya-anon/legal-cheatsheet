@@ -6,27 +6,27 @@
   [*Notes*],
 
   "DPP1",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("附表1第1原则——收集个人资料的目的及方式：资料须为与资料使用者职能或活动直接有关的合法目的而收集；收集须属必要而不过度，并以合法和在有关个案属公平的方式进行。", "Schedule 1, Principle 1—Purpose and manner of collection: personal data must be collected for a lawful purpose directly related to the data user’s function or activity; collection must be necessary, not excessive, and by lawful and fair means."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "DPP2",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("附表1第2原则——资料准确性及保留期间：须采取切实可行步骤确保资料准确；资料保存不得超过达成该用途（及直接相关用途）所需期间。", "Schedule 1, Principle 2—Accuracy and retention: all practicable steps must be taken to ensure accuracy; personal data must not be kept longer than necessary for the purpose (and directly related purpose)."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "DPP3",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("附表1第3原则——个人资料的使用：如无资料当事人的订明同意，个人资料不得用于“新目的”（即非收集时拟用目的或其直接相关目的）。", "Schedule 1, Principle 3—Use of personal data: personal data must not be used for a new purpose without the data subject’s prescribed consent."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "DPP4",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("附表1第4原则——个人资料保安：须采取所有切实可行步骤，保障所持有资料免受未经准许或意外的查阅、处理、删除、丧失或使用。", "Schedule 1, Principle 4—Security of personal data: all practicable steps must be taken to protect personal data against unauthorized or accidental access, processing, erasure, loss or use."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "DPP5",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("附表1第5原则——资讯须在一般情况下可提供：须采取切实可行步骤，让公众可知悉资料使用者的私隐政策、所持资料类别及主要使用目的。", "Schedule 1, Principle 5—Information to be generally available: practicable steps must be taken so people can ascertain the data user’s policies and practices, the kinds of data held, and the main purposes of use."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "DPP6",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("附表1第6原则——查阅个人资料：资料当事人有权查阅其个人资料、要求改正资料，并在被拒时获提供理由及提出反对。", "Schedule 1, Principle 6—Access to personal data: a data subject has rights of access and correction, and to be given reasons for refusal and to object."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "Part 6A",
@@ -34,7 +34,7 @@
   source-statutes-cell("直销专章：用或转交个人资料做直销前，通知与同意要做足。"),
 
   "Part VIII",
-  source-statutes-dual-cell("条文未匹配（Cap.486）。请按章节标题与条号回查原文。", "Provision not matched (Cap.486). Verify section reference and re-check source text."),
+  source-statutes-dual-cell("第8部——豁免：在特定场景（如防止或侦测罪行、健康相关紧急情况、新闻活动、统计及研究等）下，部分保障资料原则或查阅/改正义务可获豁免。", "Part VIII—Exemptions: in specified contexts (for example prevention or detection of crime, health-related emergencies, news activities, and statistics/research), certain data protection principles or access/correction obligations may be exempted."),
   source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
 
   "s.15",
