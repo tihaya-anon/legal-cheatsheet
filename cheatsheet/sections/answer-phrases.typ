@@ -128,4 +128,80 @@
   [转段衔接],
   [Having established [Issue A], I now turn to [Issue B], which requires a distinct statutory inquiry.],
   [段落衔接],
+
+  [行为分拆（老师偏好）],
+  [I analyse each allegedly infringing act separately: [Act 1], [Act 2], and [Act 3], because each engages a different statutory element and may produce different outcomes.],
+  [避免“把所有行为揉成一段”],
+
+  [精确引条（老师偏好）],
+  [The applicable provision is specifically s.[xx]([x]) rather than s.[xx] in general, because this sub-paragraph contains the exact element in dispute.],
+  [避免笼统引法条],
+
+  [题干事实纠偏],
+  [The facts do not support the broader inference that [...]; the safer reading is [...], and the legal analysis should proceed on that narrower basis.],
+  [防止误读题目],
+
+  [最小假设声明（作业要求）],
+  [I make only one necessary assumption: [...]. No further assumptions are required because the stated facts already establish [...].],
+  [老师要求 minimal assumptions],
+
+  [民责先于刑责],
+  [Civil infringement is established under s.[...]; criminal liability is a separate and higher-threshold inquiry under s.[...], which requires additional proof of [...].],
+  [copyright/PDPO 常见],
+
+  [刑责否定句型],
+  [Even if civil liability is arguable, criminal liability is unlikely because the prosecution element of [commercial dealing / intent / prejudicial extent] is not clearly made out.],
+  [刑责不足时],
+
+  [实质部分识别],
+  [Because the copied passages/diagrams capture the core expressive content, they are likely a substantial part; copies containing them are treated in law as copies of the original work.],
+  [HW1 高频点],
+
+  [公开表演 vs 传播],
+  [Showing content on a screen to an audience may constitute public performance under s.[...], but it is not necessarily communication to the public unless there is electronic delivery to users’ devices under s.[...].],
+  [HW1 区分 s.27 / s.28A],
+
+  [授权侵权句型],
+  [By instructing others that they were free to use the copied material and approving the resulting specification, D arguably authorised infringement under s.22(2).],
+  [HW1 授权问题],
+
+  [交易型二次侵权],
+  [Secondary infringement under s.[...] requires both dealing conduct and the required knowledge/reason-to-believe state; each limb must be proved separately.],
+  [HW1 s.31 / s.35 结构],
+
+  [业务中分发限制],
+  [Distribution in the course of business is not automatically criminal under s.118(1)(e); the business must involve dealing in infringing copies within s.118(10).],
+  [HW1 刑责排除点],
+
+  [不使用美法术语],
+  [I avoid non-HK concepts (e.g. “derivative work”, “public display right”) and apply only Hong Kong statutory language and structure.],
+  [老师明确扣分点],
+
+  [PDPO: 不公平收集],
+  [Acquiring personal data from a source known to be illicit or highly dubious is likely unfair collection contrary to DPP1(2)(b).],
+  [HW2 SWB/MDC 入口],
+
+  [PDPO: 原目的与新目的],
+  [The original purpose was [...]; using/selling the same data for [...] is a new purpose and requires prescribed consent under DPP3(1).],
+  [HW2 DPP3 核心],
+
+  [PDPO: s.35C / s.35F 配套],
+  [For direct marketing use, non-compliance with the front-end notice/consent requirements in s.35C and first-use notice obligations in s.35F creates criminal exposure.],
+  [HW2 SWB 常考],
+
+  [PDPO: s.35J 提供他人],
+  [If D provides personal data to another for use in direct marketing, s.35J written notice-and-consent requirements apply before transfer.],
+  [HW2 MDC 常考],
+
+  [替代责任分流],
+  [If the employee acted in the course of employment, the employer may be vicariously liable for the civil wrong; if not, liability must be analysed as the employer’s own subsequent conduct.],
+  [HW2 MDC 关键分叉],
+
+  [s.64(1) 要件核查],
+  [Liability under s.64(1) requires proof that the data was obtained from the data user without consent, then disclosed with gain/loss intent; failure on the first limb defeats the offence.],
+  [HW2 doxxing子题],
+
+  [答案结构收束],
+  [Accordingly, the strongest answer structure is: identify specific acts, map each act to one section, test every element, then conclude civil and criminal consequences separately.],
+  [作业与考试通用],
 )
