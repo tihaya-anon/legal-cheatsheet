@@ -12,9 +12,9 @@ ROOT = Path(__file__).resolve().parent
 CORE_DIR = ROOT.parent / "cheatsheet" / "sections" / "core-statutes"
 
 CAP_MAP = {
-    "a-copyright.typ": ("Cap.528", ROOT / "Cap.528.html"),
-    "b-pdpo.typ": ("Cap.486", ROOT / "Cap.486.html"),
-    "c-patent.typ": ("Cap.514", ROOT / "Cap.514.html"),
+    "a-copyright.typ": ("A. Copyright Ordinance (Cap.528)", "Cap.528", ROOT / "Cap.528.html"),
+    "b-pdpo.typ": ("B. PDPO (Cap.486)", "Cap.486", ROOT / "Cap.486.html"),
+    "c-patent.typ": ("C. Patents Ordinance (Cap.514)", "Cap.514", ROOT / "Cap.514.html"),
 }
 
 CELL = "single"
@@ -105,35 +105,8 @@ def sort_token_key(token: str):
 
 
 def expand_simple_section_ref(ref: str, by_temporalid: dict[str, list]) -> list[str]:
-    # Expand refs by one level:
-    # s.198 -> s.198(1), s.198(2) / s.198(a), ...
-    # s.2(1) -> s.2(1)(a), s.2(1)(b), ...
-    if not re.fullmatch(r"s\.\d+[a-zA-Z]*(?:\([0-9a-zA-Z]+\))?", ref.strip()):
-        return [ref]
-
-    base_tid = ref_to_temporalid(ref)
-    if not base_tid:
-        return [ref]
-
-    tokens: set[str] = set()
-    base_l = base_tid.lower()
-    for key in by_temporalid.keys():
-        k = key.lower()
-        prefix = base_l + "_"
-        if not k.startswith(prefix):
-            continue
-        rest = k[len(prefix) :]
-        if "_" in rest:
-            continue
-        if re.fullmatch(r"[0-9a-z]+", rest):
-            tokens.add(rest)
-
-    if not tokens:
-        return [ref]
-
-    sec = ref.strip()[2:]
-    expanded = [f"s.{sec}({t})" for t in sorted(tokens, key=sort_token_key)]
-    return [ref] + expanded
+    # Keep original refs only; do not auto-expand into subsections/subparagraphs.
+    return [ref]
 
 
 def parent_ref(ref: str) -> str | None:
@@ -156,6 +129,14 @@ def expand_section_range_ref(ref: str) -> list[str]:
     return [f"s.{n}" for n in range(start, end + 1)]
 
 
+def to_main_section_ref(ref: str) -> str:
+    r = ref.strip()
+    m = re.fullmatch(r"(s\.\d+[a-zA-Z]*)(?:\([0-9a-zA-Z]+\))*", r)
+    if not m:
+        return ref
+    return m.group(1)
+
+
 def expand_refs(refs: list[str], by_temporalid: dict[str, list]) -> list[str]:
     out: list[str] = []
     seen = set()
@@ -167,14 +148,11 @@ def expand_refs(refs: list[str], by_temporalid: dict[str, list]) -> list[str]:
                     out.append(rr)
                     seen.add(rr)
             continue
-        p = parent_ref(ref)
-        if p and p not in seen:
-            out.append(p)
-            seen.add(p)
         for r in expand_simple_section_ref(ref, by_temporalid):
-            if r not in seen:
-                out.append(r)
-                seen.add(r)
+            main_r = to_main_section_ref(r)
+            if main_r not in seen:
+                out.append(main_r)
+                seen.add(main_r)
     return out
 
 
@@ -380,7 +358,8 @@ def extract_entry_by_lang(
             )
             if target:
                 if not tokens:
-                    return node_text_without_classes(target, {"hklm_subsection"})
+                    # For main section refs, keep the full section text (including subsections).
+                    return node_text(target)
                 if len(tokens) == 1:
                     leadin_text = subsection_leadin_text(target)
                     if leadin_text and (
@@ -407,7 +386,8 @@ def extract_entry_by_lang(
                 return None
             text = node_text(n)
             if is_plain_section_ref:
-                return node_text_without_classes(n, {"hklm_subsection"})
+                # For main section refs, keep the full section text (including subsections).
+                return node_text(n)
             if is_subsection_ref:
                 leadin_text = subsection_leadin_text(n)
                 if leadin_text and (
@@ -432,7 +412,8 @@ def extract_entry_by_lang(
             if n:
                 text = node_text(n)
                 if is_plain_section_ref:
-                    return node_text_without_classes(n, {"hklm_subsection"})
+                    # For main section refs, keep the full section text (including subsections).
+                    return node_text(n)
                 return text
 
     if r.startswith("ss."):
@@ -482,7 +463,7 @@ def main() -> None:
     out = ["# Core Statutes Mentioned Provisions (from crawled HTML)", ""]
     jsonl_by_cap: dict[str, list[dict[str, str | bool]]] = {}
 
-    for typ_name, (cap_name, html_path) in CAP_MAP.items():
+    for typ_name, (_, cap_name, html_path) in CAP_MAP.items():
         cap_records: list[dict[str, str | bool]] = []
         typ_text = (CORE_DIR / typ_name).read_text(encoding="utf-8")
         refs_raw = extract_refs_from_typ(typ_text)
@@ -558,13 +539,13 @@ def main() -> None:
         print(f"Wrote: {jsonl_path}")
     typst_dir: Path = ROOT.parent / "cheatsheet" / "sections" / "source-statutes"
     typst_dir.mkdir(exist_ok=True)
-    for typ_name, (cap_name, html_path) in CAP_MAP.items():
+    for typ_name, (title, cap_name, html_path) in CAP_MAP.items():
         typst_path = typst_dir / f"{typ_name}"
         records = jsonl_by_cap[cap_name]
         lines = [
             f'#import "../preamble.typ": source-statutes-table, {def_cell(CELL)}, h2',
             "\n",
-            "#h2([])\n",
+            f"#h2([{title}])\n",
             "#source-statutes-table(\n",
             "  [*Section*],\n  [*Text*],\n\n",
         ]

@@ -1,6 +1,6 @@
 #import "../preamble.typ": exam-playbook-table, h2
 
-#h2([B. PDPO Questions])
+#h2([B. PDPO (Cap.486) Questions])
 #exam-playbook-table(
   [*Issue Type*],
   [*Statutory Route*],

@@ -1,6 +1,6 @@
 #import "../preamble.typ": h2, high-frequency-table
 
-#h2([A. Copyright Tests])
+#h2([A. Copyright (CO, Cap.528) Tests])
 #high-frequency-table(
   columns: (2.8fr, 4.2fr, 1.9fr, 2.2fr, 2.9fr),
   inset: 4pt,

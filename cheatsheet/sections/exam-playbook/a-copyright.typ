@@ -1,6 +1,6 @@
 #import "../preamble.typ": exam-playbook-table, h2
 
-#h2([A. Copyright Questions])
+#h2([A. Copyright (CO, Cap.528) Questions])
 #exam-playbook-table(
   [*Issue Type*],
   [*Statutory Route*],
