@@ -1,5 +1,5 @@
 #import "../preamble.typ": source-statutes-table, source-statutes-cell, h2
-#h2([])
+#h2([B. PDPO (Cap.486)])
 #source-statutes-table(
   [*Section*],
   [*Text*],
@@ -89,7 +89,7 @@
   source-statutes-cell("2. 释义(编辑修订——2013年第1号编辑修订纪录)"),
 
   "s.2(1)",
-  source-statutes-cell("(1)在本条例中，除文意另有所指外——不利行动(adverse action)，就个人而言，指可对该人的权利、利益、特权、责任或权益(包括合法期望)有不利影响的任何行动； 不准确(inaccurate)，就个人资料而言，指资料是不正确的、有误导性的、不完全的或过时的； 切实可行(practicable)指合理地切实可行； 文件(document)除包括书面文件外，包括——有关人士(relevant person)，就个人(不论如何描述该名个人)而言——有关资料使用者(relevant data user)——作为(act)包括故意的不作为； 投诉(complaint)指根据第37条作出的投诉； 投诉人(complainant)指已作出投诉的个人或已代表一名个人作出投诉的有关人士； 改正(correction)，就个人资料而言，指更正、删除或填备； 改正资料要求(data correction request)指根据第22(1)条提出的要求； 每日罚款(daily penalty)指就在定罪后该罪行持续的每一日所处的罚款； 使用(use)，就个人资料而言，包括披露或移转该资料； (由 2012年第18号第2条修订)披露(disclosing)，就个人资料而言，包括披露自资料推断所得的资讯； 法律规则(rule of law)指——保障资料原则(data protection principle)指在附表1 列明的任何保障资料原则； 指定日(appointed day)指根据第1(2)条指定的日子； 指明(specified)，就格式而言，指根据第67条指明； 查阅资料要求(data access request)指根据第18条提出的要求； 相当可能损害(would be likely to prejudice)包括可能会损害； 纪录簿(log book)，就资料使用者而言，指由资料使用者根据第27(1)条备存及维持的纪录簿； 订明人员(prescribed officer)指根据第9(1)条获雇用或聘用的人； 订明资讯(prescribed information)指附表3 指明的任何资讯； (由 2012年第18号第3条增补)个人身分标识符(personal identifier)指——的标识符，但用以识辨该名个人的该人的姓名，则不包括在内； 个人资料(personal data)指符合以下说明的任何资料——个人资料系统(personal data system)指全部或部分由资料使用者用作收集、持有、处理或使用个人资料的任何系统(不论该系统是否自动化的)，并包括组成该系统一部分的任何文件及设备； 家人(family member)就任何人而言，指藉血缘、婚姻、领养或姻亲关系而与该人有亲属关系的人； (由 2021年第32号第3条增补)核准实务守则(approved code of practice)指根据第12条核准的实务守则； 核对程序(matching procedure)指将为1个或1个以上的目的而取自10个或10个以上的资料当事人的个人资料与为其他目的而自该等资料当事人收集的个人资料比较的程序(用人手方法的除外)， 而——核对程序要求(matching procedure request)指根据第31(1)条提出的要求； 财经规管者(..."),
+  source-statutes-cell("(1)在本条例中，除文意另有所指外，界定本条例关键术语，包括个人资料(personal data)、资料使用者(data user)、有关人士(relevant person)、查阅资料要求(data access request)、改正资料要求(data correction request)、保障资料原则(data protection principle)、订明同意相关概念、核对程序(matching procedure)及财经规管者等，为第2至第9部的权利义务与执法门槛提供基础。"),
 
   "s.2(1)(a)",
   source-statutes-cell("(a)包含视觉影像以外的资料的纪录碟、纪录带或其他器件，而所包含的资料能够在有或没有其他设备的辅助下，从该纪录碟、纪录带或器件重现；及"),
@@ -611,7 +611,7 @@
   source-statutes-cell("(5)现声明——(a)第(3)款的施行不得损害第(1)款(a)、(b)、(c)、(d)及(f)(i)段就财经规管者而施行的概括性； (b)第(4)款下的公告是附属法例。"),
 
   "s.58(6)",
-  source-statutes-cell("(6)在本条中——犯罪者(offender)指干犯罪行的人； 罪行(crime)指——"),
+  source-statutes-cell("(6)在本条中——“犯罪者”(offender)指干犯罪行的人；“罪行”(crime)按本条例定义为可触发本条豁免目的（如防止/侦测犯罪、拘捕、检控、拘留）所涉的违法行为。"),
 
   "s.59",
   source-statutes-cell("59. 健康"),
@@ -650,7 +650,7 @@
   source-statutes-cell("(b)作出该项披露的人有合理理由相信(并合理地相信)发表及播放(不论在何处及藉何方法)该资料(不论是否实际有发表或播放该资料)是符合公众利益的。"),
 
   "s.61(3)",
-  source-statutes-cell("(3)在本条中——新闻活动(news activity)指任何新闻工作活动，并包括——"),
+  source-statutes-cell("(3)在本条中——“新闻活动”(news activity)指任何新闻工作活动，包括为向公众发布而进行的新闻搜集、新闻文章/节目制备或编纂、对新闻或时事评析，以及向公众发布相关新闻内容或评析。"),
 
   "s.61(3)(a)",
   source-statutes-cell("(a)为向公众发布的目的而进行——(i)新闻的搜集； (ii)关于新闻的文章或节目的制备或编纂；或(iii)对新闻或时事所作的评析；或"),
@@ -725,7 +725,7 @@
   source-statutes-cell("(d)该人——(i)纯粹为合法的、 第61(3)条所界定的新闻活动(或与之直接相关的活动)，而披露有关个人资料；及(由 2021年第32号第6条代替) (ii)有合理理由相信，发表或播放该个人资料，是符合公众利益的。"),
 
   "s.64(6)",
-  source-statutes-cell("(6)在本条中——指明伤害(specified harm)就某人而言，指——相关同意(relevant consent)就某资料当事人而言，指——"),
+  source-statutes-cell("(6)在本条中——“指明伤害”(specified harm)包括滋扰、骚扰、缠扰、威胁或恐吓、身体或心理伤害、导致对安全或福祉的合理忧虑，以及财产受损；“相关同意”(relevant consent)指资料当事人就有关披露作出的有效同意。"),
 
   "s.64(6)(a)",
   source-statutes-cell("(a)对该人的滋扰、骚扰、缠扰、威胁或恐吓；"),
@@ -860,7 +860,7 @@
   source-statutes-cell("(10)凡在行使接达电子器材的权力所处的情况中，有在普通法下对某人的私隐的保障，则专员或有关订明人员在行使第(8)款所指的权力时，须顾及该等保障。"),
 
   "s.66G(11)",
-  source-statutes-cell("(11)在本条中——指明人士(specified person)指——处所(premises)具有第42(11)条所给予的涵义。"),
+  source-statutes-cell("(11)在本条中——“指明人士”(specified person)指本条下须提供协助或受搜查权力影响的人；“处所”(premises)具有第42(11)条所给予的涵义。"),
 
   "s.66G(2)",
   source-statutes-cell("(2)可就第(1)(b)(i)款所述的处所行使的权力如下——(a)进入和搜查该处所(在必要时，使用在当时情况下属合理的武力进入和搜查)； (b)在该处所内，进行有关指明调查；及(c)如专员或任何订明人员合理地怀疑，在该处所内的某材料就该项指明调查而言属证据，或载有该等证据——检取、移走和扣留该材料。"),
@@ -908,7 +908,7 @@
   source-statutes-cell("(6)被捕人不得被扣留超过48小时(自被拘捕之时起计)而不予落案起诉并带到裁判官席前应讯。"),
 
   "s.66H(7)",
-  source-statutes-cell("(7)在本条中——身分证明文件(proof of identity)具有《入境条例》(第115章)第17B(1)条所给予的涵义； 获授权人员(authorized officer)指——"),
+  source-statutes-cell("(7)在本条中——“身分证明文件”(proof of identity)具有《入境条例》(第115章)第17B(1)条所给予的涵义；“获授权人员”(authorized officer)指按本条例获授权行使截停、搜查、拘捕及相关执法权力的人员。"),
 
   "s.66K",
   source-statutes-cell("66K. 标的披露的涵义"),
@@ -929,7 +929,7 @@
   source-statutes-cell("(2)就第(1)款而言，停止披露行动就属电子讯息的标的讯息而言，包括作出以下作为的行动——(a)从该讯息发布所在的电子平台(相关平台)上，将该讯息移除； (b)停止或限制任何人——(i)透过相关平台，接达该讯息； (ii)接达相关平台上该讯息发布所在的部分；或(iii)接达整个相关平台；或(c)终止——(i)为相关平台上该讯息发布所在的部分，提供主机服务；或(ii)为整个相关平台，提供主机服务。"),
 
   "s.66L(3)",
-  source-statutes-cell("(3)在本条中——中介服务(intermediary service)的涵义如下——主机服务(hosting service)的涵义如下：凡某人讬管任何曾在电子平台上寄发的存储材料，而该人或另一人就该平台提供中介服务，则讬管该材料的服务，即属主机服务 ； 接达(access)包括——传输服务(carriage service)指藉着导向电磁能、无导向电磁能或以上两者而传输通讯的服务； 电子平台(electronic platform)指在电子系统中提供的中介服务平台。 例子——"),
+  source-statutes-cell("(3)在本条中——“中介服务”(intermediary service)涵盖与电子平台运作相关的中介功能；“主机服务”(hosting service)指讬管在电子平台上寄发/储存材料的服务；“接达”(access)作广义解释；“传输服务”(carriage service)指以导向或无导向电磁能传输通讯的服务；“电子平台”(electronic platform)指在电子系统中提供中介服务的平台。"),
 
   "s.66M",
   source-statutes-cell("66M. 送达停止披露通知"),
@@ -947,7 +947,7 @@
   source-statutes-cell("(4)专员可藉向获送达停止披露通知的人送达书面通知，撤销该停止披露通知。"),
 
   "s.66M(5)",
-  source-statutes-cell("(5)在本条中——非港人服务提供者(non-Hong Kong service provider)指已经或正在向任何香港人士提供服务的人(并非香港人士者)，不论服务是否在香港提供； 香港人士(Hong Kong person)指——"),
+  source-statutes-cell("(5)在本条中——“非港人服务提供者”(non-Hong Kong service provider)指并非香港人士但已向或正在向香港人士提供服务的人，不论服务是否在香港提供；“香港人士”(Hong Kong person)按本条例定义解释。"),
 
   "s.66O",
   source-statutes-cell("66O. 关于停止披露通知的罪行"),

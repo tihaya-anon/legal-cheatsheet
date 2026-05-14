@@ -1,5 +1,5 @@
 #import "../preamble.typ": source-statutes-table, source-statutes-cell, h2
-#h2([])
+#h2([A. Copyright (CO, Cap.528)])
 #source-statutes-table(
   [*Section*],
   [*Text*],
@@ -275,7 +275,7 @@
   source-statutes-cell("198. 次要定义"),
 
   "s.198(1)",
-  source-statutes-cell("(1)在本部中——(由 2000年第64号第10条修订)文章(article)在提及在期刊中的文章的文意中，包括任何类别的项目； 司法程序(judicial proceedings)包括在任何法院，审裁处或具有权限就影响任何人的法律权利或责任的任何事宜作出裁决的人席前进行的法律程序； 未经授权(unauthorized)就任何就作品而作出的事情而言——字体(typeface)包括在印刷中使用的装饰花纹图案； 足够的卸责声明(sufficient disclaimer)就可构成侵犯第92条(反对作品受贬损处理的权利)所赋予权利的作为而言，指一项清晰和合理地显著的表示，谓某作品已受到未经其作者或导演同意的处理， 而——足够的确认声明(sufficient acknowledgement)指藉有关作品的名称或其他描述而确认该项作品并除在以下情况外识别其作者的声明——受雇(employed)， 雇员(employee)， 雇主(employer)及雇用(employment)指雇用合约或学徒训练合约下的雇用； 指明课程(specified course of study)指符合任何以下描述的研习课程——音乐视像纪录(musical visual recording)指任何附同完全是或有主要部分是由整项或部分音乐作品或由整项或部分音乐作品及有关的整项或部分文学作品所构成的声带的影片； (由 2003年第27号第5条增补)音乐声音纪录(musical sound recording)指完全是或有主要部分是由整项或部分音乐作品或由整项或部分音乐作品及有关的整项或部分文学作品所构成的声音纪录； (由 2003年第27号第5条增补)书面(writing)包括任何形式的记号或代码，不论是否手写的，亦不论其记录的方法或所记录于的媒体；而写出(written)亦据此解释； 租赁权(rental right)指版权拥有人授权租赁或禁止租赁任何以下作品的复制品的权利——国际组织(international organization)指成员包括一个或多于一个国家，地区或地方的组织； 无线电讯(wireless telegraphy)指通过为发送电磁能量而建造或安排并非由任何实体物质所提供的线路而发送电磁能量； 汇集作品(collective work)指——业务(business)包括——过境物品(article in transit)指以下物品——电子(electronic)指藉电能量，磁能量，电磁能量，电化能量或电机能量驱动，而电子形式(in electronic form)指只可藉电子方法使用的形式； 电讯系统(telecommunications system)指藉电子方法输送影像，声音或其他资料的系统； 电视剧或电视电影(television drama)指属一般称为电视剧或电视电影的一类影片； (由 2003年第27号第5条增补)电脑产生(computer-generated)就作品而言，指该作品是在没有人类作者的情况下由电脑产生的； 电影(movie)指属一般称为电影的一类影片； (由 2003年第27号第5条增补)精确复制品(facsimile copy)包括比例上经缩小或放大的复制品； 制作人(producer)就声音纪录或影片而言，指从事进行制作声音纪录..."),
+  source-statutes-cell("(1)在本部中列出次要定义及解释规则，包括文章(article)、司法程序(judicial proceedings)、未经授权(unauthorized)、足够确认声明/卸责声明、受雇与雇用关系、指明课程、音乐声音/视像纪录、电子形式、联线及电讯相关术语、租赁权、汇集作品、过境物品、电脑产生作品、电影、精确复制品及制作人等，以统一解释第II部后续条文。"),
 
   "s.198(1)(a)",
   source-statutes-cell("(a)指并非由版权拥有人作出或并非在版权拥有人的特许下作出；"),
@@ -809,7 +809,7 @@
   source-statutes-cell("(1)在符合以下规定的情况下，服务提供者制作及储存某作品的复制品，并不属侵犯该作品的版权——(a)制作及储存该复制品的唯一目的，是令该提供者能更有效率地透过网络传送该作品； (b)制作及储存该复制品是某科技过程中一个自动及必要的部分，而该过程并不改动该作品，亦不干扰合法使用科技以取得该作品的使用情况的数据； (c)储存该复制品是暂时的； (d)该提供者按照合理的行业常规，更新储存该复制品的数据库； (e)该提供者遵守接达该作品的条件(如有的话)；及(f)该提供者一旦实际知悉以下任何一项事实，便从速移除该复制品，或使其不能被接达——(i)该复制品是自某来源处制作的，而该作品已从该处被移除； (ii)该复制品是自某来源处制作的，而该作品已不能在该处被接达。"),
 
   "s.65A(2)",
-  source-statutes-cell("(2)在本条中——服务提供者(service provider)指藉电子设备或网络(或同时藉两者)，提供任何联线服务或为任何联线服务操作设施的人； 寄存(hosting)指应使用者的指令，在网络伺服器或任何电子检索系统中提供空间，以储存资料或材料； 资料搜寻工具(information location tools)指连接或指引使用者至某联线位置的工具，例如目录、索引、参考点、指示器或超文本连结； 路由选择(routing)指引导或选择传送数据的方法或路径； 联线服务(online service)包括——"),
+  source-statutes-cell("(2)在本条中——“服务提供者”(service provider)指藉电子设备或网络提供联线服务或操作其设施的人；并界定“寄存”(hosting)、“资料搜寻工具”(information location tools)、“路由选择”(routing)及“联线服务”(online service)等术语，以界定第65A暂时复制免责的适用范围。"),
 
   "s.76A",
   source-statutes-cell("76A. 供私人和家居使用而复制声音纪录(由 2022年第16号第54条增补)"),
