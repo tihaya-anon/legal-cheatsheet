@@ -277,6 +277,10 @@ def subsection_has_nested_items(node) -> bool:
     return False
 
 
+def subsection_has_direct_paragraphs(node) -> bool:
+    return bool(node.find("div", class_="hklm_paragraph", recursive=False))
+
+
 def parse_section_ref(ref: str) -> tuple[str, list[str]] | None:
     r = ref.strip()
     m = re.fullmatch(r"s\.(\d+[a-zA-Z]*)((?:\([0-9a-zA-Z]+\))*)", r)
@@ -353,7 +357,12 @@ def pick_lang_node(nodes: list, lang: str):
 
 
 def extract_entry_by_lang(
-    ref: str, by_temporalid, by_name, full_text: str, lang: str
+    ref: str,
+    by_temporalid,
+    by_name,
+    full_text: str,
+    lang: str,
+    leadin_only_refs: set[str] | None = None,
 ) -> str | None:
     r0 = ref.strip()
     parsed = parse_section_ref(r0)
@@ -374,8 +383,12 @@ def extract_entry_by_lang(
                     return node_text_without_classes(target, {"hklm_subsection"})
                 if len(tokens) == 1:
                     leadin_text = subsection_leadin_text(target)
-                    if leadin_text:
+                    if leadin_text and (
+                        not leadin_only_refs or norm_ref(ref) in leadin_only_refs
+                    ):
                         return leadin_text
+                    if subsection_has_direct_paragraphs(target):
+                        return node_text(target)
                     stripped = node_text_without_classes(target, {"hklm_paragraph"})
                     if is_leadin_only_text(stripped) and subsection_has_nested_items(
                         target
@@ -397,8 +410,12 @@ def extract_entry_by_lang(
                 return node_text_without_classes(n, {"hklm_subsection"})
             if is_subsection_ref:
                 leadin_text = subsection_leadin_text(n)
-                if leadin_text:
+                if leadin_text and (
+                    not leadin_only_refs or norm_ref(ref) in leadin_only_refs
+                ):
                     return leadin_text
+                if subsection_has_direct_paragraphs(n):
+                    return node_text(n)
                 stripped = node_text_without_classes(n, {"hklm_paragraph"})
                 if is_leadin_only_text(stripped) and subsection_has_nested_items(n):
                     return node_text(n)
@@ -468,14 +485,23 @@ def main() -> None:
     for typ_name, (cap_name, html_path) in CAP_MAP.items():
         cap_records: list[dict[str, str | bool]] = []
         typ_text = (CORE_DIR / typ_name).read_text(encoding="utf-8")
-        refs = extract_refs_from_typ(typ_text)
+        refs_raw = extract_refs_from_typ(typ_text)
 
         html = html_path.read_text(encoding="utf-8", errors="ignore")
         soup = BeautifulSoup(html, "html.parser")
         by_temporalid, by_name = build_indices(soup)
         full_text = normalize_space(soup.get_text(" ", strip=True))
-        refs = expand_refs(refs, by_temporalid)
+        refs = expand_refs(refs_raw, by_temporalid)
         refs = sorted(refs, key=lambda x: norm_ref(x))
+        refs_raw_norm = [norm_ref(r) for r in refs_raw]
+        leadin_only_refs: set[str] = set()
+        # Mark subsection refs like s.118(1) as lead-in only
+        # when explicit child refs like s.118(1)(a) exist in raw refs.
+        for r in refs_raw_norm:
+            if not re.fullmatch(r"s\.\d+[a-z]?(?:\([0-9a-z]+\)){2,}", r):
+                continue
+            parent = re.sub(r"\([0-9a-z]+\)$", "", r)
+            leadin_only_refs.add(parent)
 
         out.append(f"## {cap_name}")
         out.append("")
@@ -485,9 +511,16 @@ def main() -> None:
         found = 0
         for ref in refs:
             zh = extract_entry_by_lang(
-                ref, by_temporalid, by_name, full_text, "zh-Hant-HK"
+                ref,
+                by_temporalid,
+                by_name,
+                full_text,
+                "zh-Hant-HK",
+                leadin_only_refs,
             )
-            en = extract_entry_by_lang(ref, by_temporalid, by_name, full_text, "en")
+            en = extract_entry_by_lang(
+                ref, by_temporalid, by_name, full_text, "en", leadin_only_refs
+            )
             is_found = bool(zh or en)
             if zh or en:
                 found += 1
