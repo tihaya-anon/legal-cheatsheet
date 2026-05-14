@@ -14,6 +14,4 @@
 
 #include "sections/glossary.typ"
 
-#include "sections/core-statutes/index.typ"
-
-#include "sections/source-statutes/index.typ"
+#include "sections/source-statutes-plus/index.typ"

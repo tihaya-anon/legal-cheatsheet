@@ -41,6 +41,13 @@
   align: left + top,
   ..c,
 )
+#let source-statutes-plus-table(..c) = table(
+  columns: (0.8fr, 5.9fr, 2.65fr),
+  inset: 1.6pt,
+  stroke: .35pt,
+  align: left + top,
+  ..c,
+)
 #let source-statutes-dual-cell(zh, en) = [
   #bold-enum-markers(zh)
   #linebreak()
