@@ -7,35 +7,35 @@
 
   "DPP1",
   source-statutes-dual-cell("附表1第1原则——收集个人资料的目的及方式：资料须为与资料使用者职能或活动直接有关的合法目的而收集；收集须属必要而不过度，并以合法和在有关个案属公平的方式进行。", "Schedule 1, Principle 1—Purpose and manner of collection: personal data must be collected for a lawful purpose directly related to the data user’s function or activity; collection must be necessary, not excessive, and by lawful and fair means."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("收集要有明确目的，范围只可“够用”，方式要合法且公平。"),
 
   "DPP2",
   source-statutes-dual-cell("附表1第2原则——资料准确性及保留期间：须采取切实可行步骤确保资料准确；资料保存不得超过达成该用途（及直接相关用途）所需期间。", "Schedule 1, Principle 2—Accuracy and retention: all practicable steps must be taken to ensure accuracy; personal data must not be kept longer than necessary for the purpose (and directly related purpose)."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("资料要准确、要更新；用途结束后不能无限期留存。"),
 
   "DPP3",
   source-statutes-dual-cell("附表1第3原则——个人资料的使用：如无资料当事人的订明同意，个人资料不得用于“新目的”（即非收集时拟用目的或其直接相关目的）。", "Schedule 1, Principle 3—Use of personal data: personal data must not be used for a new purpose without the data subject’s prescribed consent."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("用途不能“变道”太远；要转作新用途，通常先取订明同意。"),
 
   "DPP4",
   source-statutes-dual-cell("附表1第4原则——个人资料保安：须采取所有切实可行步骤，保障所持有资料免受未经准许或意外的查阅、处理、删除、丧失或使用。", "Schedule 1, Principle 4—Security of personal data: all practicable steps must be taken to protect personal data against unauthorized or accidental access, processing, erasure, loss or use."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("保安是硬要求，要防未授权查阅、外泄、误删与滥用。"),
 
   "DPP5",
   source-statutes-dual-cell("附表1第5原则——资讯须在一般情况下可提供：须采取切实可行步骤，让公众可知悉资料使用者的私隐政策、所持资料类别及主要使用目的。", "Schedule 1, Principle 5—Information to be generally available: practicable steps must be taken so people can ascertain the data user’s policies and practices, the kinds of data held, and the main purposes of use."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("私隐政策不能藏着掖着，公众应能看懂你持有什么、为何而用。"),
 
   "DPP6",
   source-statutes-dual-cell("附表1第6原则——查阅个人资料：资料当事人有权查阅其个人资料、要求改正资料，并在被拒时获提供理由及提出反对。", "Schedule 1, Principle 6—Access to personal data: a data subject has rights of access and correction, and to be given reasons for refusal and to object."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("当事人可查阅、改正自己的资料；拒绝时要给理由并保留申诉路径。"),
 
   "Part 6A",
-  source-statutes-dual-cell("irst collection if, but only if, the data user concerned has complied with the provisions of data protection principle 1(3) in respect of the subsequent collection. 第6A部在直接促销中使用个人资料及提供个人资料以供用于直接促销(第6A部由 2012年第18号第21条增补) Part 6A Use of Personal Data in Direct Marketing and Provision of Personal Data for Use in Direct Marketing (Part 6A added 18 of 2012 s. 21) 35A. 第6A部的释义(1)在本部中——同意(consent)就在直接促销中使用个人资料而言，或就提供个人资料以供在直接促销中使用而言，包括表示不反对该项使用或提供； 回应途径(response channel)指由资料使用者根据第35C(2)(c)或 35J(2)(c)条向资料当事人提供的途径； 直接促销(direct marketing)指透过直接促销方法——(a)要约提供货品、设施或服务，或为该等货品、设施或服务可予提供而进行广告宣传；或(b)为慈善、文化、公益、康体、政治或其他目的索求捐赠或贡献； 直接促销方法(direct marketing means)指——(a)藉邮件、图文传真、电子邮件或其他形式的传讯，向指名特定人士送交资讯或货品；或(b)以特定人士为致电对象的电话通话； 促销标的(marketing subject)就直接促销而言， 指——(a)被要约提供或就其可予提供而进行广告宣传的任何货品、设施或服务；或(b)任何索求捐赠或贡献的目的； 许可种类个人资料(permitted kind of personal data)就资料当事人对某项拟进行的个人资料使用或提供的同意而言，指符合以下条件的种类的个人资料——(a)该种类的个人资料是在该当事人根据第35C(2)(b)(i)或 35J(2)(b)(ii)条获提供的资讯中指明的；及(b)该同意是就该种类的个人资料给予的； 许可类别人士(permitted class of persons)就资料当事人对某项拟进行的个人资料提供的同意而言，指符合以下条件的类别的人士——(a)该类别的人士是在该当事人根据第35J(2)(b)(iii)条获提供的资讯中指明的；及(b)该同意是就该类别的人士给予的； 许可类别促销标的(permitt", "irst collection if, but only if, the data user concerned has complied with the provisions of data protection principle 1(3) in respect of the subsequent collection. 第6A部在直接促销中使用个人资料及提供个人资料以供用于直接促销(第6A部由 2012年第18号第21条增补) Part 6A Use of Personal Data in Direct Marketing and Provision of Personal Data for Use in Direct Marketing (Part 6A added 18 of 2012 s. 21) 35A. 第6A部的释义(1)在本部中——同意(consent)就在直接促销中使用个人资料而言，或就提供个人资料以供在直接促销中使用而言，包括表示不反对该项使用或提供； 回应途径(response channel)指由资料使用者根据第35C(2)(c)或 35J(2)(c)条向资料当事人提供的途径； 直接促销(direct marketing)指透过直接促销方法——(a)要约提供货品、设施或服务，或为该等货品、设施或服务可予提供而进行广告宣传；或(b)为慈善、文化、公益、康体、政治或其他目的索求捐赠或贡献； 直接促销方法(direct marketing means)指——(a)藉邮件、图文传真、电子邮件或其他形式的传讯，向指名特定人士送交资讯或货品；或(b)以特定人士为致电对象的电话通话； 促销标的(marketing subject)就直接促销而言， 指——(a)被要约提供或就其可予提供而进行广告宣传的任何货品、设施或服务；或(b)任何索求捐赠或贡献的目的； 许可种类个人资料(permitted kind of personal data)就资料当事人对某项拟进行的个人资料使用或提供的同意而言，指符合以下条件的种类的个人资料——(a)该种类的个人资料是在该当事人根据第35C(2)(b)(i)或 35J(2)(b)(ii)条获提供的资讯中指明的；及(b)该同意是就该种类的个人资料给予的； 许可类别人士(permitted class of persons)就资料当事人对某项拟进行的个人资料提供的同意而言，指符合以下条件的类别的人士——(a)该类别的人士是在该当事人根据第35J(2)(b)(iii)条获提供的资讯中指明的；及(b)该同意是就该类别的人士给予的； 许可类别促销标的(permitt"),
+  source-statutes-dual-cell("第6A部——在直接促销中使用或转交个人资料：资料使用者在使用资料作直销，或把资料转交他人作直销前，须先履行通知义务并取得有效同意；当事人可随时要求停止使用或转交，违规可触发刑责。", "Part 6A—Use and provision of personal data in direct marketing: before using data for direct marketing, or providing data to others for direct marketing, a data user must satisfy notice requirements and obtain valid consent; the data subject may require cessation at any time, and non-compliance may incur criminal liability."),
   source-statutes-cell("直销专章：用或转交个人资料做直销前，通知与同意要做足。"),
 
   "Part VIII",
   source-statutes-dual-cell("第8部——豁免：在特定场景（如防止或侦测罪行、健康相关紧急情况、新闻活动、统计及研究等）下，部分保障资料原则或查阅/改正义务可获豁免。", "Part VIII—Exemptions: in specified contexts (for example prevention or detection of crime, health-related emergencies, news activities, and statistics/research), certain data protection principles or access/correction obligations may be exempted."),
-  source-statutes-cell("未匹配到条文。先核对条号，再回抓。"),
+  source-statutes-cell("第8部是豁免集中区：不是“全面免责任”，而是按目的与条件限缩适用。"),
 
   "s.15",
   source-statutes-dual-cell("15. 资料使用者登记册(1)专员须使用资料使用者申报表及变更通知的资讯，以备存及维持一份已呈交该等申报表的资料使用者的登记册。 (由 2012年第18号第9条代替) (2)登记册须——(a)采用数据库的形式；及(b)就每一名已呈交资料使用者申报表的资料使用者，载有在该申报表及任何变更通知中提供并且是专员认为合适的资讯的详情。 (由 2012年第18号第9条修订) (3)凡专员为在登记册与某资料使用者有关的范围内备存及维持登记册而合理地需要关于该资料使用者的订明资讯，专员可藉送达予该资料使用者的书面通知，要求该资料使用者呈交载有该等资讯并符合指明格式的通知，而该资料使用者须在专员所送达的通知中规定的期间(该期间不得迟于通知送达后的30日)内，以专员在通知中规定的方式，呈交该符合指明格式的通知。 (由 2012年第18号第9条修订) (4)凡根据第(3)款由某资料使用者呈交予专员的订明资讯在呈交后有所变更——(a)如(但只有在以下情况下)——(i)该等资讯在该款下的有关的通知中指明为本款所适用的资讯，及(ii)第(i)节所提述的通知载有或附有——(A)本款的文本一份；或(B)一项摘要说明本款施加予资料使用者的规定的陈述， 该资料使用者须向专员送达指明该等变更的书面通知；及(b)该资料使用者须在该等变更发生后的30日内向专员送达上述通知。 (4A)任何资料使用者明知或罔顾实情地在呈交予或送达专员的通知中，提供任何在要项上属虚假或具误导性的资讯，充作遵守第(3)或(4)款，即属犯罪，一经定罪，可处第3级罚款及监禁6个月。 (由 2012年第18号第9条增补) (5)如专员信纳某人已不再是资料使用者，他可从登记册中，删去其中所载的基于该人的资料使用者的身分而与他有关的任何详情。 (6)已不再是资料使用者的人，可藉向专员送达符合订明格式的通知，要求专员从登记册中，删去其中所载的基于该人的资料使用者的身分而与他有关的详情，而除非该人已撤回该项要求，专员须在收到该通知当日后的3个月内，依从该项要求。 (7)任何人在根据第(6)款送达专员的通知中，为了登记册所载的基于该人的资料使用者身分而与该人有关的详情得以删除，而提供任何在要项上属虚假或具误导性的资讯，即属犯罪，一经定罪，可处第3级罚款及监禁6个月。 (由 2012年第18号第9条增补)", "15. Register of data users (1) The Commissioner must keep and maintain a register of data users who have submitted data user returns, using information in those returns and in any change notices. (Replaced 18 of 2012 s. 9) (2) The register shall— (a) be in the form of a database; and (b) contain, in respect of each data user who has submitted a data user return, such particulars of the information supplied in that return and any change notice as the Commissioner thinks fit. (Amended 18 of 2012 s. 9) (3) The Commissioner may, by notice in writing served on a data user, require the data user to submit a notice in the specified form containing such prescribed information in relation to the data user as the Commissioner may reasonably require in order to keep and maintain the register in so far as it relates to that data user, and the data user shall so submit the second-mentioned notice within such period (being a period of not less than 30 days after service of the first-mentioned notice) and in such manner as the Commissioner requires in the first-mentioned notice. (Amended 18 of 2012 s. 9) (4) Where any prescribed information submitted to the Commissioner under subsection (3) by a data user changes subsequent to the submission, then the data user shall serve a notice in writing on the Commissioner specifying such change— (a) if, but only if— (i) such information is specified..."),
