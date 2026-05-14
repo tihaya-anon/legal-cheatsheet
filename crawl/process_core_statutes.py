@@ -228,16 +228,33 @@ def text_with_direct_children(node, skip_classes: set[str], limit: int = 1400) -
 
 
 def node_text_without_classes(node, skip_classes: set[str], limit: int = 1400) -> str:
-    cloned = copy.copy(node)
+    # Deep clone via re-parse to avoid mutating/depending on original tree links.
+    cloned = BeautifulSoup(str(node), "html.parser")
+    root = cloned.find()
+    if root is None:
+        return node_text(node, limit)
     for t in list(cloned.find_all(True)):
         if not getattr(t, "attrs", None):
             continue
         cls = set(t.get("class") or [])
         if cls & skip_classes:
             t.decompose()
-    text = normalize_space(cloned.get_text(" ", strip=True))
+    text = normalize_space(root.get_text(" ", strip=True))
     if not text:
         return node_text(node, limit)
+    return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
+def subsection_leadin_text(node, limit: int = 1400) -> str | None:
+    num = node.find("div", class_="hklm_num", recursive=False)
+    leadin = node.find("div", class_="hklm_leadIn", recursive=False)
+    if not leadin:
+        return None
+    num_t = normalize_space(num.get_text(" ", strip=True)) if num else ""
+    lead_t = normalize_space(leadin.get_text(" ", strip=True))
+    text = normalize_space(f"{num_t} {lead_t}".strip())
+    if not text:
+        return None
     return text if len(text) <= limit else text[: limit - 3] + "..."
 
 
@@ -356,6 +373,9 @@ def extract_entry_by_lang(
                 if not tokens:
                     return node_text_without_classes(target, {"hklm_subsection"})
                 if len(tokens) == 1:
+                    leadin_text = subsection_leadin_text(target)
+                    if leadin_text:
+                        return leadin_text
                     stripped = node_text_without_classes(target, {"hklm_paragraph"})
                     if is_leadin_only_text(stripped) and subsection_has_nested_items(
                         target
@@ -376,6 +396,9 @@ def extract_entry_by_lang(
             if is_plain_section_ref:
                 return node_text_without_classes(n, {"hklm_subsection"})
             if is_subsection_ref:
+                leadin_text = subsection_leadin_text(n)
+                if leadin_text:
+                    return leadin_text
                 stripped = node_text_without_classes(n, {"hklm_paragraph"})
                 if is_leadin_only_text(stripped) and subsection_has_nested_items(n):
                     return node_text(n)
