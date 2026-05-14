@@ -21,17 +21,35 @@ def esc_typst_str(s: str) -> str:
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
-def parse_entries(content: str) -> list[tuple[str, str]]:
-    # Match:
+def parse_entries(content: str) -> list[tuple[str, str, str]]:
+    # Match either:
     #   "s.xx",
-    #   source-statutes-cell("...")
-    pattern = re.compile(
-        r'\n\s*"([^"]+)",\n\s*source-statutes-cell\("((?:[^"\\]|\\.)*)"\),'
+    #   source-statutes-cell("zh"),
+    # or
+    #   "s.xx",
+    #   source-statutes-dual-cell("zh", "en"),
+    block = re.compile(
+        r'\n\s*"([^"]+)",\n\s*(source-statutes-(?:dual-)?cell\((?:.|\n)*?\)),',
+        re.M,
     )
-    out: list[tuple[str, str]] = []
-    for sec, raw in pattern.findall(content):
-        text = raw.replace('\\"', '"').replace("\\\\", "\\")
-        out.append((sec, text))
+    out: list[tuple[str, str, str]] = []
+    for sec, cell_call in block.findall(content):
+        dual = re.match(
+            r'source-statutes-dual-cell\("((?:[^"\\]|\\.)*)",\s*"((?:[^"\\]|\\.)*)"\)',
+            cell_call,
+            flags=re.S,
+        )
+        if dual:
+            zh = dual.group(1).replace('\\"', '"').replace("\\\\", "\\")
+            en = dual.group(2).replace('\\"', '"').replace("\\\\", "\\")
+            out.append((sec, zh, en))
+            continue
+        single = re.match(
+            r'source-statutes-cell\("((?:[^"\\]|\\.)*)"\)', cell_call, flags=re.S
+        )
+        if single:
+            zh = single.group(1).replace('\\"', '"').replace("\\\\", "\\")
+            out.append((sec, zh, ""))
     return out
 
 
@@ -46,7 +64,7 @@ def build_file(name: str) -> None:
     entries = parse_entries(src)
 
     lines = [
-        '#import "../preamble.typ": source-statutes-plus-table, source-statutes-cell, h2',
+        '#import "../preamble.typ": source-statutes-plus-table, source-statutes-cell, source-statutes-dual-cell, h2',
         f"#h2([{title}])",
         "#source-statutes-plus-table(",
         "  [*Section*],",
@@ -54,14 +72,20 @@ def build_file(name: str) -> None:
         "  [*Notes*],",
         "",
     ]
-    for sec, txt in entries:
+    for sec, zh_txt, en_txt in entries:
         note = notes_map.get(sec)
         if not note:
             note = "待补：人工口语化注释。"
-        if re.sub(r"\s+", " ", txt).strip().startswith("NOT FOUND"):
+        text_joined = f"{zh_txt} {en_txt}".strip()
+        if re.sub(r"\s+", " ", text_joined).strip().startswith("NOT FOUND"):
             note = "未匹配到条文。先核对条号，再回抓。"
         lines.append(f"  {esc_typst_str(sec)},")
-        lines.append(f"  source-statutes-cell({esc_typst_str(txt)}),")
+        if en_txt:
+            lines.append(
+                f"  source-statutes-dual-cell({esc_typst_str(zh_txt)}, {esc_typst_str(en_txt)}),"
+            )
+        else:
+            lines.append(f"  source-statutes-cell({esc_typst_str(zh_txt)}),")
         lines.append(f"  source-statutes-cell({esc_typst_str(note)}),")
         lines.append("")
     lines.append(")")

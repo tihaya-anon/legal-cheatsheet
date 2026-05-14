@@ -17,7 +17,7 @@ CAP_MAP = {
     "c-patent.typ": ("C. Patents Ordinance (Cap.514)", "Cap.514", ROOT / "Cap.514.html"),
 }
 
-CELL = "single"
+CELL = "dual"
 DASH_CHARS = "—―－"
 
 
