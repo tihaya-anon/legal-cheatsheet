@@ -1,0 +1,30 @@
+--- page 1 ---
+
+COMP7901 (2025-26)
+Legal Protection of Digital Property
+Homework #2
+Due: 11 pm, 19 April 2026
+Read "Guide to Doing Homework Assignments" before working, and ensure that your
+essay complies with "Policy on Assignments" before submitting. Whenever possible, cite
+authorities (i.e., section numbers of HK legislation and/or relevant cases) to support your
+argument. If you rely on cases not mentioned in lectures, you must provide their full citations
+(eg. [2007] 3 HKC 255). If you need to make any assumptions about the facts, make the most
+reasonable and the minimal number of assumptions, and state what they are.
+PokFulam Bank (PFB) is a bank in Hong Kong with over 1 million customers. It has a
+large database containing, among other things, the contact and financial information
+of its customers. A month ago, the database was accessed by an unknown hacker who
+had copied all of its contents ("the Incident"). The Incident was reported to the police
+but the hacker has not been found. Meanwhile, PFB's customers began to receive
+advertising emails addressed to them personally from SaiWan Bank (SWB), inviting
+them to switch to SWB in view of the Incident. A significant number of PFB's
+customers have since switched to SWB.
+Through a private investigator, PFB has found that shortly after the Incident, SWB has
+purchased from MegaData Centre (MDC) the contact information of PFB's customers
+("the Information"), on condition that SWB will keep the Information confidential as
+it belongs to PFB. A staff member of MDC has secretly told the private investigator
+that the Information is authentic, as it was obtained by an employee of MDC directly
+from PFB's database.
+(a) Does SWB have any legal liabilities under the Personal Data (Privacy)
+Ordinance? Explain.
+(b) Does MDC have any legal liabilities under the Personal Data (Privacy)
+Ordinance? Explain.

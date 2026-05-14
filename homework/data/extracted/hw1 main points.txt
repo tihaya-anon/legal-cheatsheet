@@ -1,0 +1,122 @@
+--- page 1 ---
+
+1
+COMP7901 (2025-26)
+Homework #1 Main Points of Discussion
+The following are the main points of discussion that should be addressed in a full
+answer to the homework assignment. The order of discussions may vary to suit your
+presentation.
+(a) Specific copyright works
+ HKI accounting software (literary work) – authors are the software engineers
+(likely joint authors), owner is HKI (employee work).
+ Textual content of the Document (literary work) - author is Jacky, owner is
+HKI (employee work).
+ Diagrams in the Document (artistic works) - authors are the software
+engineers (joint or distinctive authors depending on whether their skills and
+labour are separable), owner is HKI (employee work).
+NB. The Document is not a compilation under copyright law. "Compilation"
+is a selection and arrangement of pre-existing materials created NOT in
+contemplation of being included in the compilation. In contrast, the textual
+content and diagrams of the Document not copied from elsewhere were
+created by their authors precisely for the Document. (Same argument applies
+to Specification.)
+ Specification for KLI's new software
+- consists of textual content (literary works) and diagrams (artistic works);
+- in both cases, authors are members of the programming team (joint or
+distinctive), owner is KLI (employee work).
+NB. While KLI's specification may be infringing for containing passages and
+diagrams copied from the Document, it does not necessarily mean it is not
+copyrightable as a whole: Interlego.
+
+--- page 2 ---
+
+2
+(b) Jacky’s civil liabilities
+NB. The crucial passages and diagrams are likely a substantial part of the
+Document. Hence the Copies containing these passages and diagrams are, at
+law, copies of the Document.
+1. Copied the Document: CO, s.23
+- printed the Copies (hard copies) for the KLI programming team.
+NB. The copy of Document Jacky took with him upon leaving HKI is not
+necessarily infringing, even if it was made by him. The facts only state that
+Jacky is not allowed to disclose the Document to anyone outside HKI. This does
+not imply that Jacky is forbidden to make a copy of the Document and keep it
+with him.
+2. Performed the textual content of the Document in public: CO, s.27
+- showed on screen at the seminar certain crucial passages extracted from
+the Document;
+- the programming team forms a sector of the public and seminar not in
+domestic/quasi-domestic setting.
+NB. S.27 does not apply to artistic works (ie. diagrams).
+NB. Showing on screen is NOT communicating to public. "Communicating to
+public" under s.28A includes broadcasting, cabling and making available to
+public (ie. delivering contents to the viewer's device). Showing on screen at
+seminar does not involve such delivery.
+3. Issued copies of the Document to public: CO, s.24
+- distributed the Copies to the KLI programming team;
+- the Copies had not previously been distributed anywhere in the world.
+4. Authorised the KLI programming team to copy: CO, s.22(2)
+- told the KLI team that they were free to use the Copies in designing a new
+accounting software for KLI, and endorsed the specification containing all
+of the passages and diagrams appearing in the Copies: CBS Songs.
+
+--- page 3 ---
+
+3
+5. Distributed infringing copies of the Document in the course of business: CO,
+s.31(1)(c)
+- the Copies are infringing because no licence had been given to Jacky to
+make them: CO, s.35(2);
+- Jacky knew he did not have the licence to make the Copies for the
+programming team, as he knew the Document was not to be disclosed to
+anyone outside HKI;
+- Jacky gave the Copies to the programming team in the course of
+supervising them at work.
+6. Possessed in the course of business an infringing copy of the Document: CO,
+s.31(1)(a)
+- Jacky would be liable if and only if, after giving the Copies to the
+programming team, he has retained a Copy for himself.
+7. [Bonus point] Exhibited the Document to public in the course of business: CO,
+s.31(1)(c)
+- showing those crucial passages and diagrams on screen at the seminar is
+arguably exhibiting the Document in public;
+- see discussion in 2. above.
+(c) Jacky’s criminal liabilities
+ Jacky was not involved in any of the acts under CO, s.118(1)(a)-(d).
+ Jacky's distribution of Copies to the programming team is not a crime under
+s.118(1)(e), as his business does not involve dealing in infringing copies:
+s.118(10).
+ Even if Jacky is still in possession of the Copies, s.118(1)(f) does not apply, as
+there is no evidence to show that his possession is with a view to the Copies
+being sold or let for hire by anyone: (1)(f)(i); or being dealt with by anyone in
+any trade or business which consists of dealing in infringing copies: (1)(f)(ii)).
+ Only remaining possibility is s.118(1)(g), under which the issue is whether
+Jacky's distribution of the Copies to the programming team is "to such an extent
+as to affect prejudicially the copyright owner do not apply to the facts".
+ Assessment of prejudicial effect is governed by s.118(2AA). Given that HKI's
+business is in insurance and not software design and development, Jacky's
+
+--- page 4 ---
+
+4
+distribution of Copies containing merely passages and diagrams relating to
+software design would unlikely cause economic prejudice to HKI's insurance
+business.
+ Jacky is unlikely to have any criminal liability under CO.
+Common Mistakes
+ Not complying with (or simply ignoring) the assignment policy.
+ Mistakes/misinterpretation of facts eg. "… came up with a specification for the new
+software containing all of the passages and diagrams appearing in the Copies" is taken to
+mean that the specification contains only the passages and diagrams and nothing
+else.
+ Lumping different infringing acts together in one passage instead of analysing
+them separately, rendering the discussion disorganised, incoherent and unclear.
+ No indication of which specific legal provision the discussion is based on eg.
+simply citing "s.118" in support of Jacky's criminal liabilities.
+ Using US legal concepts/terms without checking if they are part of HK law eg.
+"derivative work", "public display right".
+Fatal Mistakes
+ Not bothered to understand and apply the basic legal concepts/principles
+discussed in lectures and simply write without thinking.
+ Citing provisions without checking or reading them – including provisions that
+are non-existent (repealed), irrelevant, or plainly wrong.

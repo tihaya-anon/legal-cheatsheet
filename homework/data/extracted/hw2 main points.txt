@@ -1,0 +1,104 @@
+--- page 1 ---
+
+1
+COMP7901 (2025-26)
+Homework #2 Points of Discussion
+(a) SWB's liabilities
+1. Breach of DPP1
+From the given facts, SWB bought the Information from MDC knowing that:
+- the Information belongs to PFB;
+- the Information has to be kept confidential; and
+- there was the Incident where an unknown hacker had accessed and
+copied the content of PFB's database.
+All these suggest that SWB knew that the Information kept by MDC was at
+least dubious, or likely obtained by unlawful means (hacking, infringement of
+copyright in PFB's database). Acquiring personal data from such sources is
+unfair to the data subjects. SWB is in breach of DPP1(2)(b) with civil liabilities.
+2. Breach of DPP3
+The original purpose of the Information is for PFB's provision of banking
+services to its customers. SWB's use of the Information to invite PFB customers
+to switch to SWB is a new purpose and requires the customers' prescribed
+consent. No evidence of such consent appears on the facts. This is breach of
+DPP3(1), which incurs civil liabilities.
+3. Use of personal data in direct marketing
+SWB's use of the Information to send advertising emails addressed to PFB
+customers personally, inviting them to switch to SWB, is use of personal data
+in direct marketing: PDPO, s.35A(1). However, the facts do not suggest that
+SWB has complied with the following requirements.
+- S.35C: inform PFB customers in the Information about the intended use
+of their personal data in direct marketing, and seek their consent; and
+- S.35F: on first use of the Information in direct marketing, inform the PFB
+customers concerned their right to request SWB to cease to use.
+NB. S.35E is only applicable when SWB has complied with s.35C.
+SWB is criminally liable for contravening each of the above.
+
+--- page 2 ---
+
+2
+(b) MDC's liabilities
+4. Breach of DPP1
+The Information was obtained by an employee of MDC directly from PFB's
+database. It is highly likely that the employee had accessed PFB's database
+without consent and copied the Information therefrom. Such means of
+collecting the Information is clearly unlawful (hacking + infringement of
+PFB's database copyright), and the employee is civilly liable for breach of
+DPP1(2)(a). However, whether MDC is also liable depends on how MDC has
+acquired the information.
+- If the employee's act of obtaining the Information was done in the course
+of employment (ie. sufficiently connected to the employee's work), then
+MDC can naturally keep the Information for its business purposes. In this
+case, the employee's act is, under common law, deemed to be done by
+MDC. As such, MDC is vicariously liable for breach of DPP1(2)(a), which
+incurs civil liabilities.
+NB. This vicarious liability does not depend on s.65(1) and is based purely
+on common law. MDC is only vicariously liable for breach of DPP1(2)(a)
+(civil wrong), not hacking (crime).
+- On the other hand, if the employee's act was not in the course of
+employment, then MDC must have subsequently acquired the
+Information from the employee. From the given facts, it is likely that at
+the time of acquisition, MDC already knew that the Information was
+obtained by the employee using unlawful means (as a staff member told
+the private investigator). If so, MDC's collection of the Information in the
+circumstances is unfair contrary to DPP1(2)(b), with civil liabilities.
+NB. This is not vicarious liability but MDC's own breach of DPP1(2)(b).
+5. Breach of DPP3
+The original purpose of the Information is for PFB's provision of banking
+services to its customers. MDC's sale of the Information to others is a new
+purpose and requires prescribed consent of the PFB customers concerned.
+MDC has not obtained such consent and is thus in breach of DPP3(1) with
+civil liabilities.
+
+--- page 3 ---
+
+3
+6. Doxxing offence under s.64(1)
+Whether MDC is liable under s.64(1) depends on how MDC has obtained the
+Information as discussed in 4 above.
+- If MDC's employee had obtained the Information in the course of
+employment, then the following can be established.
+a. Under the common law principle of vicarious liability, MDC is
+deemed to have obtained the Information from PFB without PFB's
+consent; (see discussion in 4 above)
+b. It has sold (disclosed/transferred) the Information to SWB;
+c. The disclosure was with intent to obtain monetary gain.
+Each element of the offence under s.64(1) is thus established, and MDC is
+criminally liable.
+- If the employee's act of obtaining the Information was not done in the
+course of employment, then MDC must have acquired the Information
+from the employee. If so, the acquisition should be with the employee's
+consent. This immediately fails one element of s.64(1) (ie. obtaining data
+from the data user without consent). Accordingly, MDC is not liable
+under s.64(1).
+7. Provision of personal data in direct marketing
+ If at time of sale, MDC knew SWB was going to use the Information in
+direct marketing, MDC would be providing personal data to SWB for use
+in direct marketing. From the given facts, it does not appear that MDC has
+complied with the following requirement.
+- S.35J: inform PFB customers in the Information in writing about the
+intended provision of their personal data to another for use in direct
+marketing, and seek their written consent;
+MDC is criminally liable for non-compliance with s.35J.
+NB. S.35K is only applicable when MDC has complied with s.35J.
+ If at time of sale, MDC had no knowledge that SWB was going to use the
+Information in direct marketing, then MDC would not be liable for
+providing the Information to SWB for use in direct marketing.

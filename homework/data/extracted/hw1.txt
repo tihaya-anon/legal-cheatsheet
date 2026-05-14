@@ -1,0 +1,35 @@
+--- page 1 ---
+
+COMP7901 (2025-26)
+Legal Protection of Digital Property
+Homework #1
+Due: 11 pm, 15 March 2026
+Read "Guide to Doing Homework Assignments" before working, and ensure that your
+essay complies with "Policy on Assignments" before submitting. Whenever possible, cite
+authorities (i.e., section numbers of HK legislation and/or relevant cases) to support your
+argument. If you rely on cases not mentioned in lectures, you must provide their full citations
+(eg. [2007] 3 HKC 255). If you need to make any assumptions about the facts, make the most
+reasonable and the minimal number of assumptions, and state what they are.
+Jacky, IT manager of HongKong Insurance (HKI), has led a team of in house software
+engineers to develop an accounting software for the company. During the design stage
+of the software, Jacky had regularly met with the software engineers to come up with
+a design document ("the Document") for the software. While the Document was
+written entirely by Jacky, all of the diagrams contained therein were contributed by
+the software engineers. It was understood that the Document was to be kept
+confidential and not to be disclosed to anyone outside HKI.
+The new software was written entirely by the software engineers. Shortly after the
+software was installed, Jacky left HKI to join KowLoon Insurance (KLI) as the Head
+of IT and took with him a copy of the Document. Jacky's first project at KLI was to
+revamp the company's accounting software. To kick-start the project, he had given a
+seminar to KLI’s programming team showing on screen certain crucial passages and
+diagrams extracted from the Document. He had also printed and given the team hard
+copies of these passages and diagrams ("the Copies"), telling them that they were free
+to use the Copies in designing a new accounting software for KLI. A few weeks later,
+the team came up with a specification for the new software containing all the passages
+and diagrams appearing in the Copies.
+(a) Identify ALL specific copyright works in the facts above. For each copyright
+work so identified, name the author(s) and copyright owner(s). Explain.
+(b) Does Jacky have any civil liabilities (and if so, who can sue) under the
+Copyright Ordinance of Hong Kong? Explain.
+(c) Does Jacky have any criminal liabilities under the Copyright Ordinance of
+Hong Kong? Explain.
